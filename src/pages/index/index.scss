@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+@import "../../components/index";
+.index {
+  background-color: $primaryColor;
+  font-family: $primaryFont;
+
+  &__section {
+    border: 1px solid $secondaryColor
+  }
+
+  &__aside {
+    border: 1px dashed $secondaryColor
+  }
+}

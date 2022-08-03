@@ -1,0 +1,9 @@
+// в scss пишем пути src: url('/src/fonts...
+
+@font-face {
+  font-family: 'font-name';
+  src: url('/src/fonts/font-name/regular/font-name.woff2') format('woff2'),
+  url('/src/fonts/font-name/regular/font-name.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
