@@ -1,0 +1,58 @@
+@import "/src/styles/variables";
+
+.header-top {
+  height: 74.5px;
+  width: 100%;
+  border-bottom: 1px solid rgba(210, 221, 227, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px 0 21px;
+
+  &__actions {
+    display: none;
+  }
+
+  &__menu {
+    display: none;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    padding: 0 30px 0 33px;
+    &__burger {
+    }
+    &__logo {
+      display: none;
+    }
+    &__actions {
+      display: flex;
+    }
+    &__language {
+      margin-left: 16.12px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+    padding: 0 32px 0 32px;
+    height: 73.5px;
+
+    &__burger {
+      display: none;
+    }
+    &__menu {
+      display: block;
+    }
+    &__language {
+      margin-left: 20.12px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    padding: 0 45px 0 70px;
+    height: 83.5px;
+
+    &__language {
+      margin-left: 35.12px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "src/styles/variables";
+
+.main-card {
+  height: 100%;
+  position: relative;
+  background: linear-gradient(89.61deg, rgba(3, 20, 28, 0.79) 14.05%, rgba(3, 20, 28, 0.2) 60.85%), linear-gradient(180deg, rgba(11, 11, 11, 0.56) 0%, rgba(72, 70, 70, 0) 30.58%), linear-gradient(0deg, rgba(3, 20, 28, 0.2), rgba(3, 20, 28, 0.2));
+
+  &__body {
+    padding: 117px 21px 0;
+    max-width: $maxWith;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: -140px;
+    z-index: -1;
+    @media (min-width: 1100px) {
+      width: 100%;
+      right: 0;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: $primaryColor;
+    margin-bottom: 11px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: $primaryColor;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    &__body {
+      padding: 250px 146px 0 29px;
+    }
+
+    &__title {
+      font-size: 58px;
+      line-height: 68px;
+      margin-bottom: 18px;
+      width: 556px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 1px;
+    }
+  }
+  @media (min-width: $tabletBreakpoint) {
+    &__title {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktopBreakpoint) {
+    &__body {
+      padding: 305px 146px 0 29px;
+    }
+    &__title {
+      font-size: 58px;
+      line-height: 68px;
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    &__body{
+      padding: 395px 146px 0 29px;
+    }
+    &__title {
+      font-size: 76px;
+      line-height: 89px;
+      margin-bottom: 25px;
+    }
+    &__text {
+      font-size: 26px;
+      line-height: 40px;
+
+    }
+  }
+}

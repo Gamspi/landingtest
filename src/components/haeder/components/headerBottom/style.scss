@@ -1,0 +1,42 @@
+@import "/src/styles/variables";
+
+.header-bottom {
+  display: none;
+
+  &__menu {
+    display: none;
+  }
+
+  &__btn {
+    width: 173px;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: $maxWith;
+    margin: 0 auto;
+    padding: 0 31px;
+
+  }
+  @media (min-width: $desktopBreakpoint) {
+    padding: 0 29px;
+    &__menu {
+      display: block;margin-bottom: 2px;
+    }
+    &__btn {
+      width: 136px;
+      margin-bottom: -10px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    &__menu{
+      margin-left: 53px;
+    }
+    &__btn {
+      width: 175px;
+      margin-bottom: -1px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+include ../titleBlock/titleBlock
+include ../moreButton/moreButton
+section.about
+    .about__img-container
+        img.about__img(src='/src/images/about/normal.png')
+    .about__title-block
+        +titleBlock('О продукте', 'Комплексное диспетчерское решение для MOTOTRBO')
+    .about__content
+        | SmartPTT — программное обеспечение для организации диспетчерской радиосвязи на платформе MOTOTRBO™.
+        | Удобные и гибкие сервисы для диспетчеров, руководителей и сотрудников при оптимизации финансовых, кадровых и временных затрат организации
+    .about__more-btn
+        +moreButton('#')
+    .about__swiper
+        .about__swiper-item
+

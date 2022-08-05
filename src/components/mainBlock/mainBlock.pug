@@ -1,0 +1,34 @@
+include mainCard/mainCard
+-
+    let mainCards = [
+        {
+            title: 'Диспетчерская связь',
+            text: 'Эффективная координация рабочего процесса',
+            active: true
+        },        {
+            title: 'Диспетчерская связь1',
+            text: 'Эффективная координация рабочего процесса',
+            active: false
+        },        {
+            title: 'Диспетчерская связь2',
+            text: 'Эффективная координация рабочего процесса',
+            active: false
+        },        {
+            title: 'Диспетчерская связь3',
+            text: 'Эффективная координация рабочего процесса',
+            active: false
+        },
+    ]
+
+.main-block
+    .main-block__container.j-slider-opacity-container
+        //img.main-block__logo(src='')
+        ul.main-block__cards.j-list-opacity
+          each item in mainCards
+              li.main-block__item.j-slid(class=item.active && '_active')
+                  +mainCard(item.title, item.text)
+        .main-block__pagination
+            .main-pagination.j-pagination-panel
+        .main-block__menu
+            include mainMenu/mainMenu
+

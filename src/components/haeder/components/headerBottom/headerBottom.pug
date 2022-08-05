@@ -1,0 +1,78 @@
+include ../headerMenu/headerMenu
+include ../../../greenButton/greenButton
+include ../logo/logo
+-
+    let bottomMenu = [
+        {
+            label: 'Продукты и сервисы',
+            isBig: true,
+            drop: [
+                {
+                    title: 'title1',
+                    links: [
+                        {
+                            linkText: 'text'
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            label: 'Функционал',
+            isBig: true,
+            drop: [
+                {
+                    title: 'title1',
+                    links: [
+                      {
+                      linkText:'text'
+                    }
+                    ]
+                },
+                {
+                    title: 'title1',
+                    links: [
+                      {
+                      linkText:'text'
+                    }
+                    ]
+                },
+            ]
+        },
+
+        {
+            label: 'Отрасли и проекты',
+            isBig: true,
+            drop: [
+                {
+                    title: 'title1',
+                    links: [
+                      {
+                      linkText:'text'
+                    }
+                    ]
+                },
+                {
+                    title: 'title1',
+                    links: [
+                      {
+                      linkText:'text'
+                    }
+                    ]
+                },
+            ]
+        },
+        {
+            label: 'Как купить',
+            isBig: true,
+        }
+    ]
+.header-bottom
+
+    .header-bottom__logo
+        +logo
+    .header-bottom__menu
+        +headerMenu(bottomMenu)
+    .header-bottom__btn
+        +greenButton('Скачать Демо')
+

@@ -1,0 +1,47 @@
+@import "/src/styles/variables";
+.green-button {
+  background: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
+  box-shadow: 0px 4px 20px rgba(57, 69, 77, 0.6);
+  border-radius: 3px;
+  padding: 13px 25px 16px 21px;
+  width: 100%;
+  &__text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    transition: color .3s ease;
+
+  }
+
+  &:hover {
+    .green-button__text {
+      color: #CBFBAB;
+
+    }
+  }
+  @media (min-width: $tabletBreakpoint) {
+    padding: 13px 25px 16px 21px;
+    &__text {
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+    padding: 11px 18px 12px;
+    &__text{
+      line-height: 14px;
+      font-size: 12px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    padding: 14px 18px ;
+    &__text {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

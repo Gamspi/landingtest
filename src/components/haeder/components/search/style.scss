@@ -1,0 +1,7 @@
+@import "/src/styles/variables";
+
+.search {
+  @media (min-width: $tabletBreakpoint) {
+    margin-top: 5px;
+  }
+}

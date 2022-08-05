@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  min-width: 360px;
+  min-width: 320px;
   word-wrap: break-word;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ input::-ms-clear {
 
 a, a:visited {
   text-decoration: none;
-  //color: inherit;
+  color: inherit;
 }
 
 a:hover {

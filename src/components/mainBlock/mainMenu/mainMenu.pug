@@ -1,0 +1,11 @@
+-
+    let mainMenu =[
+        {label:'Выбирай радио', img: '', colorClass: 'green'},
+        {label:'Выбирай “цифру”', img: '', colorClass: 'green-light'},
+        {label:'Выбирай SMARTPTT', img: '', colorClass: 'blue'},
+    ]
+.main-menu
+        each item in mainMenu
+            .main-menu__item(class=item.colorClass)
+              .main-menu__lable=item.label
+

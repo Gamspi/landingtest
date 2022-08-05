@@ -1,4 +1,5 @@
 import './index.scss'
+import ListSliderOpacity from '../../ts/listSliderOpacity'
 
 class Index {
   constructor () {
@@ -6,7 +7,11 @@ class Index {
   }
 
   init () {
-    console.log('index page mounted')
+    document.querySelectorAll('.j-slider-opacity-container')
+      .forEach(block => {
+        const Container = new ListSliderOpacity(block as HTMLElement)
+        Container.init()
+      })
   }
 }
 

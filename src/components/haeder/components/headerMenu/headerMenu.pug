@@ -1,0 +1,21 @@
+mixin headerMenu(menu)
+    .header-menu
+        each item in menu
+            if item.drop
+                .header-menu__item.dropdown-menu
+                    .dropdown-menu__btn(class=item.isBig && 'dropdown-menu__btn--big')
+                            span.dropdown-menu__label=item.label
+                            svg.dropdown-menu__label-arrow(width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(opacity='0.6' d='M4.5 5L0.602886 0.5L8.39711 0.499999L4.5 5Z' fill='#ffffff')
+
+
+                    .dropdown-menu__list
+                        .dropdown-menu__list-body
+                            each drop in item.drop
+                                .dropdown-menu__block
+                                    if drop.title
+                                        .dropdown-menu__list-title=drop.title
+                                    each link in drop.links
+                                         a.dropdown-menu__link=link.linkText
+            else
+                a.header-menu__item.header-menu-link(class=item.isBig && 'header-menu-link--big')=item.label

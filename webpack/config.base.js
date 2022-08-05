@@ -1,12 +1,16 @@
 const { PATH } = require('./CONSTANTS')
 const { getEnteries } = require('./GET_ENTERIES')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const enteries = getEnteries()
 const entry = {}
 
-enteries.forEach(({ path, name }) => {
+enteries.forEach(({
+  path,
+  name
+}) => {
   entry[name] = `${path}/${name}.ts`
 })
 
@@ -27,7 +31,7 @@ const configBase = {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader"
+        loader: 'html-loader'
 
       },
       {
@@ -62,7 +66,7 @@ const configBase = {
         ]
       },
       {
-        test:/\.(sc|sa)ss/,
+        test: /\.(sc|sa)ss/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader
@@ -80,8 +84,8 @@ const configBase = {
       },
       {
         test: /\.pug$/,
-        use: ['html-loader','pug-html-loader'],
-        exclude: /(node_modules|bowercomponents)/,
+        use: ['html-loader', 'pug-html-loader'],
+        exclude: /(node_modules|bowercomponents)/
 
       },
       {
@@ -111,13 +115,38 @@ const configBase = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
     }),
-    ...enteries.map(({ path, name }) => {
-        console.log(path, name)
-        return new HTMLWebpackPlugin({
-          template: `${path}/${name}.pug`,
-          filename: `${name}.html`
-        })
-      }
+    // new CopyWebpackPlugin([
+    //   {
+    //     from: './src/fonts',
+    //     to: './fonts'
+    //   },
+    //   {
+    //     from: './src/img',
+    //     to: './img'
+    //   },
+    //   {
+    //     from: './src/svg',
+    //     to: './svg'
+    //   },
+    //   {
+    //     from: './src/js/plugins',
+    //     to: './js/plugins'
+    //   }
+    //   // {
+    //   //     from: './src/uploads',
+    //   //     to: './uploads'
+    //   // }
+    // ]),
+    ...enteries.map(({
+      path,
+      name
+    }) => {
+      console.log(path, name)
+      return new HTMLWebpackPlugin({
+        template: `${path}/${name}.pug`,
+        filename: `${name}.html`
+      })
+    }
     )
   ]
 }

@@ -1,0 +1,36 @@
+@import "/src/styles/variables";
+.burger {
+  position: relative;
+  width: 33px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:after, &:before {
+    content: '';
+  }
+
+  div, &:after, &:before {
+    border-bottom: 2px solid #FFFFFF;
+    width: 100%;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    width: 31px;
+    margin-bottom: 0;
+
+  }
+}

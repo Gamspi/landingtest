@@ -1,0 +1,29 @@
+.about {
+  padding: 41px 20px 36px;
+  background: linear-gradient(0.4deg, #F4F8FA 14.62%, rgba(244, 248, 250, 0) 94.84%), url('/src/images/about/bg.png');
+
+  &__img-container {
+    perspective-origin: center;
+    margin: 0 0 30px -15px;
+    perspective: 900px;
+    height: 213px;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    transform-origin: right bottom;
+    transform: rotateY(-20deg) rotate(1deg);
+    box-shadow: 30px 30px 40px rgb(123 153 188 / 25%), 5px 5px 20px rgb(123 148 176 / 20%);
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  &__content {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 26px;
+    color: #3D4245;
+  }
+}

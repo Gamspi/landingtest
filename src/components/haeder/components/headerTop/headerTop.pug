@@ -1,0 +1,52 @@
+include ../headerMenu/headerMenu
+include ../logo/logo
+-
+    let topMenu = [
+        {
+            label: 'Контакты'
+        },
+        {
+            label: 'Техподдержка',
+            drop: [
+                {
+
+                    links: [
+                        {
+                            linkText: 'text'
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            label: 'Партнёрам',
+            drop: [
+                {
+
+                    links: [
+                        {
+                            linkText: 'text'
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            label: 'Новости'
+        }, {
+            label: 'о нас'
+        },
+    ]
+.header-top
+    a.header-top__logo(href='/')
+        +logo
+    .header-top__burger
+        include ../burger/burder
+    .header-top__menu
+        +headerMenu(topMenu)
+    .header-top__actions
+        button.header-top__search
+            include ../search/search
+        .header-top__language
+            include ../languageChainge/languageChainge
+

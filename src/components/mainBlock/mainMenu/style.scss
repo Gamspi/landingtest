@@ -1,0 +1,206 @@
+@import "src/styles/variables";
+
+.main-menu {
+
+  display: flex;
+  padding: 0 18.9px 0 20.9px;
+  max-width: $maxWith;
+  margin: 0 auto;
+  width: 100%;
+
+  &__lable {
+    color: $primaryColor;
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+
+  &__item {
+    position: relative;
+    flex: 1 1;
+    height: 98px;
+    border-radius: 3px;
+    box-shadow: 0 20px 25px rgba(113, 131, 140, 0.5);
+    padding: 12.47px 12px 12.47px 9px ;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 11px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 98.13px;
+      height: 98.13px;
+      border-radius: 50%;
+      right: calc(50% - 49px);
+      top: -27.84px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 42px;
+      width: 42px;
+      top: 5.3px;
+      right: calc(50% - 21px);
+      z-index: 1;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 42px;
+    }
+
+    &.green {
+      background: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
+
+      &:after {
+        background-color: #63ad30;
+
+      }
+
+      &:before {
+        background-color: #78BE47;
+        background-image: url("/src/images/mainBlockimg/Mask Group.svg");
+
+      }
+
+    }
+
+    &.green-light {
+      background: linear-gradient(274.56deg, #38BA93 12.12%, #49D288 95.4%);
+
+      &:after {
+        background-color: #35B089;
+      }
+
+      &:before {
+        background-color: #48D288;
+        background-image: url("/src/images/mainBlockimg/Mask Group (1).svg");
+
+      }
+    }
+
+    &.blue {
+      background: linear-gradient(90deg, #0095DA -16.67%, #006AB2 137.93%);
+
+      &:after {
+        background-color: #0174BA;
+      }
+
+      &:before {
+        background-color: #0095DA;
+        background-image: url("/src/images/mainBlockimg/Mask Group (2).svg");
+
+      }
+    }
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    padding: 0px 29.9px 0 30.9px;
+    &__item {
+      align-items: center;
+      height: 96px;
+      padding: 12.47px 18px;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      &:after {
+        width: 130px;
+        height: 130px;
+        right: -21px;
+        top: calc(50% - 65px);
+
+      }
+
+      &:before {
+        width: 57px;
+        height: 57px;
+        right: 18px;
+        top: calc(50% - 28.5px);
+        background-size: 57px;
+      }
+    }
+    &__lable {
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      width: 132px;
+      text-align: left;
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+    padding: 0px 46.9px 0 31.9px;
+
+    &__item {
+      padding: 12.47px 26px;
+
+      &:not(:last-child) {
+        margin-right: 13px;
+      }
+
+      &:after {
+        width: 147px;
+        height: 147px;
+        right: -21px;
+        top: calc(50% - 73.5px);
+      }
+
+      &:before {
+        width: 73px;
+        height: 74px;
+        right: 22px;
+        top: calc(50% - 39.5px);
+        background-size: 73px;
+      }
+    }
+    &__lable {
+      font-size: 22px;
+      line-height: 28px;
+      width: 169px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    padding: 0px 36.9px 0 38.9px;
+
+    &__item {
+      height: 130px;
+      padding: 12.47px 44px;
+
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+
+      &:after {
+        width: 201px;
+        height: 201px;
+        right: -21px;
+        top: calc(50% - 100.5px);
+      }
+
+      &:before {
+        width: 99px;
+        height: 99px;
+        right: 32px;
+        top: calc(50% - 49.5px);
+        background-size: 99px;
+      }
+    }
+    &__lable {
+      font-size: 28px;
+      line-height: 36px;
+      width: 228px;
+    }
+  }
+
+}
