@@ -1,6 +1,8 @@
 @import "/src/styles/variables";
 
 .logo {
+
+
   @media (min-width: $tabletBreakpoint) {
     width: 238px;
     height: 60px;
@@ -12,5 +14,8 @@
   @media (min-width: $widthDesktopBreakpoint) {
     width: 301px;
     height: 75px;
+  }
+  &._hidden{
+    display: none;
   }
 }

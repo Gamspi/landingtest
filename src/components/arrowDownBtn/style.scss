@@ -1,0 +1,45 @@
+@import '/src/styles/variables';
+
+.arrow-down {
+  display: none;
+  position: fixed;
+  bottom: 17px;
+  justify-content: center;
+  width: 100%;
+  transition: opacity 0.3s ease;
+
+  &__bg, &__circle, path {
+    transition: all .5s ease;
+
+  }
+
+  &__btn {
+    height: 49px;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  &--white {
+    .arrow-down__bg {
+      fill: #CFD9DF;
+    }
+
+    .arrow-down__circle {
+      stroke: #6B7B90;
+      opacity: 1;
+    }
+
+    path {
+      stroke: #6B7B90;
+    }
+  }
+
+  @media (min-width: $desktopBreakpoint) {
+    display: flex;
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    height: 66px;
+  }
+}

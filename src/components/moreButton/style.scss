@@ -4,4 +4,13 @@
   font-size: 14px;
   line-height: 16px;
   color: #0095DA !important;
+
+  &__arrow {
+    margin-left: 11px;
+  }
+
+  &--big-text {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }

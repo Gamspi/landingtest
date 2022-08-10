@@ -29,6 +29,7 @@
     .dropdown-menu__btn {
       opacity: 1;
     }
+
     .dropdown-menu__label-arrow {
       transform: rotate(-180deg);
     }
@@ -44,7 +45,8 @@
 
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: inherit;
+    transition: color .3s ease;
 
     &:not(:last-child) {
       margin-right: 26px;
@@ -87,7 +89,7 @@
   }
 
   &__label-arrow {
-    transition: transform .3s ease ;
+    transition: transform .3s ease;
     margin-left: 7px;
     @media (min-width: $widthDesktopBreakpoint) {
       margin-left: 9px;
@@ -156,7 +158,8 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
 
-  color: #FFFFFF;
+  color: inherit;
+  transition: color .3s ease;
 
   opacity: 0.6;
 
@@ -176,7 +179,7 @@
     font-size: 15px;
     line-height: 18px;
     opacity: 0.8;
-    transition: opacity .3s ease;
+    transition: opacity .3s ease, color .3s ease;
 
     &:not(:last-child) {
       margin-right: 20px;

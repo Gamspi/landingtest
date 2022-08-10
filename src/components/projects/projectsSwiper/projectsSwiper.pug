@@ -1,0 +1,46 @@
+-
+    let projectsCards = [
+        {
+            date: {
+                day: '21',
+                month: 'сентября',
+                year: '2018',
+            },
+            text: {
+                top: 'Промышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производство',
+                bottom: 'Решение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторождений',
+            },
+            img: '/src/images/project/project001.jpg',
+        }, {
+            date: {
+                day: '21',
+                month: 'сентября',
+                year: '2018',
+            },
+            text: {
+                top: 'Промышленное производство',
+                bottom: 'Решение MOTOTRBO™ для сибирских нефтяных месторождений',
+            },
+            img: '/src/images/project/project001.jpg',
+        },
+    ]
+
+.projects-swiper
+    ul.projects-swiper__content
+      each item in projectsCards
+          li.projects-swiper__item.projects-item
+              //img.projects-item__img(src=item.img)
+              .projects-item__date.date
+                  .date__day=item.date.day
+                  .date__left-block
+                      .date__month=item.date.month
+                      .date__year=item.date.year
+              .projects-item__info
+                  .projects-item__text-top=item.text.top
+                  .projects-item__text-bottom=item.text.bottom
+
+
+
+    .projects-swiper__navigation
+        .projects-swiper__navigation-item
+

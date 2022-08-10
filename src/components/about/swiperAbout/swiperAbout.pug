@@ -1,0 +1,8 @@
+mixin aboutSwiper(pathArray)
+    .about-swiper
+        ul.about-swiper__content
+          each path in pathArray
+              li.about-swiper__item
+                  img.about-swiper__img(src=path)
+    .about-swiper__pagination
+        include ../../pagination/paginatino

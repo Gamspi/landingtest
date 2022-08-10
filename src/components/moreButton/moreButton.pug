@@ -1,2 +1,8 @@
-mixin moreButton(href)
-    a.more-button(href=href) Узнать больше
+mixin moreButton(href,isBig)
+    a.more-button(href=href class=isBig && 'more-button--big-text')
+         span.more-button__label Узнать больше
+         svg.more-button__arrow.arrow(width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg')
+             path.arrow__path(d='M1.5 4L14 4' stroke='#0095DA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+             path.arrow__path(d='M12 7L15 4L12 1' stroke='#0095DA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+

@@ -1,0 +1,20 @@
+@import '/src/styles/variables';
+@import './projectsSwiper/style';
+
+.projects {
+
+  &__container {
+    padding: 35px 16px 0;
+
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    &__container {
+      padding: 52px 30px 0;
+
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+    height: 100vh;
+  }
+}

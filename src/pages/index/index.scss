@@ -11,3 +11,15 @@
   padding: 0 20px;
   max-width: 1390px + 40px;
 }
+
+.main {
+  transition: margin-top .5s ease;
+  @media (min-width: $desktopBreakpoint) {
+    overflow: hidden;
+  }
+}
+body{
+  @media (min-width: $desktopBreakpoint) {
+    overflow: hidden;
+  }
+}

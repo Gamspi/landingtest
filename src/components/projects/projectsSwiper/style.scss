@@ -1,0 +1,140 @@
+@import '/src/styles/variables';
+
+.projects-swiper {
+  &__content {
+    margin: 0 -16px;
+    position: relative;
+    height: 82vw;
+    overflow: hidden;
+    display: flex;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    &__content {
+      height: 62.4vw;
+      margin: 22px 0 0;
+    }
+  }
+}
+
+.projects-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  align-items: flex-end;
+  padding: 62px 80px 23.72px 24px;
+  background: #000;
+  flex: 0 0 100%;
+
+  &__date {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__text-top {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
+    overflow: hidden;
+    max-height: 52px;
+  }
+
+  &__text-bottom {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin-top: 11px;
+    overflow: hidden;
+    max-height: 93px;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    box-shadow: 0px 8px 25px rgba(196, 210, 216, 0.55);
+    border-radius: 5px;
+    padding: 100px 31px 53.72px 38px;
+    &__date {
+      top: 21px;
+      left: 32px;
+    }
+    &__text-top {
+      font-size: 13px;
+      line-height: 18px;
+    }
+    &__text-bottom {
+      font-size: 32px;
+      line-height: 41px;
+      max-height: 125px;
+    }
+  }
+}
+
+.date {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+
+
+  &__day {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 51px;
+    margin-right: 5px;
+  }
+
+  &__month {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 1px;
+  }
+
+  &__year {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    &__day {
+      font-size: 56px;
+      line-height: 79px;
+    }
+    &__month {
+      font-size: 16px;
+      line-height: 23px;
+    }
+    &__year {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__left-block {
+      padding: 0 0 5px 1px;
+    }
+  }
+}

@@ -1,7 +1,14 @@
 extends  ../../layout/layout
+include   ../../components/arrowDownBtn/arrowDownBtn
+
 block variables
   - let title = 'Диспетчерская связь'
 block content
   main.main
     include ../../components/mainBlock/mainBlock
     include ../../components/about/about
+    include ../../components/choose/choose
+    include ../../components/lastBlock/lastBlock
+    include ../../components/footer/footer
+
+    +arrowDownBtn

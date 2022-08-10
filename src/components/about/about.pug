@@ -1,15 +1,32 @@
 include ../titleBlock/titleBlock
 include ../moreButton/moreButton
+include swiperAbout/swiperAbout
+-
+    let aboutSwiper = [
+        '/src/images/about/swiper/aboutSwiper003.png',
+        '/src/images/about/swiper/aboutSwiper001.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+        '/src/images/about/swiper/aboutSwiper002.png',
+    ]
 section.about
-    .about__img-container
-        img.about__img(src='/src/images/about/normal.png')
-    .about__title-block
-        +titleBlock('О продукте', 'Комплексное диспетчерское решение для MOTOTRBO')
-    .about__content
-        | SmartPTT — программное обеспечение для организации диспетчерской радиосвязи на платформе MOTOTRBO™.
-        | Удобные и гибкие сервисы для диспетчеров, руководителей и сотрудников при оптимизации финансовых, кадровых и временных затрат организации
-    .about__more-btn
-        +moreButton('#')
+    .about__container
+        .about__img-container
+            img.about__img(src='/src/images/about/normal.png')
+        .about__info
+            .about__title-block
+                +titleBlock('О продукте', 'Комплексное диспетчерское решение для MOTOTRBO')
+
+            ul.about__content
+                li.about__paragraph SmartPTT — программное обеспечение для организации диспетчерской радиосвязи на платформе MOTOTRBO™.
+                li.about__paragraph Удобные и гибкие сервисы для диспетчеров, руководителей и сотрудников при оптимизации финансовых, кадровых и временных затрат организации
+            .about__more-btn
+                +moreButton('#')
     .about__swiper
-        .about__swiper-item
+        +aboutSwiper(aboutSwiper)
 

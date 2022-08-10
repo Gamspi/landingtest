@@ -1,13 +1,17 @@
+@import 'swiperAbout/style';
+@import '/src/styles/variables';
+
 .about {
-  padding: 41px 20px 36px;
-  background: linear-gradient(0.4deg, #F4F8FA 14.62%, rgba(244, 248, 250, 0) 94.84%), url('/src/images/about/bg.png');
+  padding: 41px 13px 36px 20px;
+  background: linear-gradient(0.4deg, #F4F8FA 14.62%, rgba(244, 248, 250, 0) 94.84%);
+  background-image: url('/src/images/about/bg.png');
 
   &__img-container {
     perspective-origin: center;
-    margin: 0 0 30px -15px;
+    margin: 0 0 0 -35px;
     perspective: 900px;
     height: 213px;
-    margin-bottom: 10px;
+
   }
 
   &__img {
@@ -20,10 +24,115 @@
   }
 
   &__content {
+    padding-right: 8px;
+  }
+
+  &__paragraph {
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
     line-height: 26px;
     color: #3D4245;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
   }
+
+  &__more-btn {
+    margin-top: 22px;
+  }
+
+  &__swiper {
+    margin-top: 42px;
+  }
+
+  @media(min-width: $tabletBreakpoint) {
+    padding: 41px 14px 64px 33px;
+    &__img-container {
+      margin: 0px 94px 0px -65px;
+      height: auto;
+    }
+    &__title-block {
+      margin-top: 57px;
+      padding-right: 45px;
+    }
+
+    &__paragraph {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    &__content {
+      padding-right: 31px;
+      margin-top: 20px;
+    }
+    &__more-btn {
+      margin-top: 27px;
+    }
+    &__swiper {
+      margin-top: 62px;
+    }
+  }
+  @media(min-width: $desktopBreakpoint) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 164px 14px 100px 30px;
+    &__container {
+      max-width: 1420px;
+      display: flex;
+      flex: 1 0 auto;
+      align-items: center;
+      margin: 0 auto;
+    }
+    &__img-container {
+      order: 2;
+      padding: 0;
+      margin: 75px 28px 0px -70px;
+    }
+    &__info {
+      flex: 1 0 50%;
+    }
+    &__content {
+      margin-left: 3px;
+      padding-right: 42px;
+      margin-top: 20px;
+
+    }
+
+    &__more-btn {
+      margin-top: 36px;
+    }
+    &__paragraph {
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    padding: 213px 0px 122px 38px;
+    &__paragraph {
+      font-size: 20px;
+      line-height: 35px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &__info{
+      flex: 0 0 41%;
+    }
+    &__swiper{
+      max-width: 1605px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    &__img-container {
+      margin: 28px -14px 0 17px;
+      perspective: 4000px;
+    }
+  }
+
 }

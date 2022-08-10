@@ -1,5 +1,6 @@
 import './index.scss'
 import ListSliderOpacity from '../../ts/listSliderOpacity'
+import Resize from '../../ts/resizer'
 
 class Index {
   constructor () {
@@ -7,6 +8,7 @@ class Index {
   }
 
   init () {
+    Resize.init()
     document.querySelectorAll('.j-slider-opacity-container')
       .forEach(block => {
         const Container = new ListSliderOpacity(block as HTMLElement)

@@ -1,0 +1,37 @@
+
+include ../titleBlock/titleBlock
+.news
+    .news__container
+        .news__title
+            +titleBlock(false, 'Новости')
+        ul.news__cards
+            li.news__card-item.news-card-item
+                .news-card-item__date.news-date
+                    .news-date__day 19
+                    .news-date__left-block
+                        .news-date__month сентября
+                        .news-date__year 2018
+                .news-card-item__label.news-label
+                    img.news-label__icon(src='/src/images/news/icons/newsIcon001.svg')
+                    .news-label__title Релиз
+                h4.news-card-item__text Релиз SmartPTT 9.3.1: GPS Batching SmartPTT 9.3: редизайн карт, backhaul-цепь ретрансляторов
+            li.news__card-item.news-card-item
+                .news-card-item__date.news-date
+                    .news-date__day 1
+                    .news-date__left-block
+                        .news-date__month августа
+                        .news-date__year 2018
+                .news-card-item__label.news-label
+                    img.news-label__icon(src='/src/images/news/icons/newsIcon001.svg')
+                    .news-label__title Технические советы
+                h4.news-card-item__text SmartPTT 9.3: редизайн карт, backhaul-цепь ретрансляторов
+            li.news__card-item.news-card-form
+                .news-card-form__title Подпишитесь на нашу рассылку
+                input.news-card-form__input(placeholder='Email' type='email')
+                button.news-card-form__btn подписаться
+                .news-card-form__footer.news-form-footer
+                    input.news-form-footer__check(type='checkbox')
+                    .news-form-footer__info
+                        span.news-form-footer__title Я согласен с условиями обработки
+                            a.news-form-footer__link  персональных данных
+

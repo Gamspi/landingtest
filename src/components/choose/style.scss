@@ -1,0 +1,115 @@
+@import "./chooseSwiper/style";
+@import '/src/styles/variables';
+
+.choose {
+  padding: 41px 13px 40px 20px;
+  //background: linear-gradient(0.4deg, #F4F8FA 14.62%, rgba(244, 248, 250, 0) 94.84%);
+  background-image: url('/src/images/about/bg.png');
+
+  &__content {
+    padding-right: 8px;
+  }
+
+  &__paragraph {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 26px;
+    color: #3D4245;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__more-btn {
+    margin-top: 27px;
+  }
+
+  &__swiper {
+    margin-top: 39px;
+  }
+
+  @media(min-width: $tabletBreakpoint) {
+    padding: 24px 14px 57px 37px;
+
+    &__title-block {
+      margin-top: 57px;
+      padding-right: 95px;
+    }
+
+    &__paragraph {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    &__content {
+      padding-right: 31px;
+      margin-top: 20px;
+    }
+    &__more-btn {
+      margin-top: 36px;
+    }
+    &__swiper {
+      margin-top: 32px;
+    }
+  }
+  @media(min-width: $desktopBreakpoint) {
+    height: 100vh;
+    display: flex;
+    padding: 164px 14px 100px 30px;
+    &__container {
+      max-width: 1420px;
+      display: flex;
+      flex: 1 0 50%;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    &__info {
+      flex: 1 0 50%;
+    }
+    &__content {
+      margin-left: 3px;
+      padding-right: 42px;
+      margin-top: 28px;
+
+    }
+
+    &__more-btn {
+      margin-top: 36px;
+    }
+    &__paragraph {
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &__swiper {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding: 40px 47px 0px 3px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    padding: 213px 0px 122px 38px;
+    &__paragraph {
+      font-size: 18px;
+      line-height: 32px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &__info {
+      flex: 1 0 47%;
+    }
+    &__swiper {
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+
+}

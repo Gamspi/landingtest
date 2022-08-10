@@ -18,6 +18,8 @@
     text-align: center;
     text-transform: uppercase;
     z-index: 10;
+    max-height: 30px;
+    overflow: hidden;
   }
 
   &__item {
@@ -26,7 +28,7 @@
     height: 98px;
     border-radius: 3px;
     box-shadow: 0 20px 25px rgba(113, 131, 140, 0.5);
-    padding: 12.47px 12px 12.47px 9px ;
+    padding: 12.47px 8px 12.47px 8px ;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -110,7 +112,7 @@
       align-items: center;
       height: 96px;
       padding: 12.47px 18px;
-
+      max-height: none;
       &:not(:last-child) {
         margin-right: 16px;
       }
@@ -137,6 +139,7 @@
       letter-spacing: 0.02em;
       width: 132px;
       text-align: left;
+      max-height: none;
     }
   }
   @media (min-width: $desktopBreakpoint) {
