@@ -161,10 +161,11 @@
                               path(d='M6.00195 4.50024L0.00195273 9L0.00195312 -2.62268e-07L6.00195 4.50024Z' fill='#6B7B90')
                   .dropdown__container
                       button.dropdown__prev-btn.j-prev-btn Назад
+                      .dropdown__list-title=item.label
                       ul.dropdown__list
                         each block in item.blocks
                             li.dropdown__block
-                                .dropdown__list-title=item.label
+
                                 .dropdown__list-subtitle=block.title
                                 ul.dropdown__items
                                   each link in block.list

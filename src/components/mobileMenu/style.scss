@@ -13,6 +13,10 @@
   z-index: 1000;
   overflow: hidden;
 
+  &__item {
+    border-bottom: 1px solid #D2DDE3;;
+  }
+
   &__body {
     height: 100%;
     width: 100%;
@@ -29,9 +33,10 @@
 
   &__list {
     transition: transform .3s ease;
+    padding-bottom: 122px;
 
     &._open {
-      transform: translateX(-100%);
+      //transform: translateX(-100%);
     }
   }
 
@@ -70,6 +75,7 @@
     display: flex;
     padding: 20px;
     align-items: center;
+    width: 100%;
   }
 
   &__label {
@@ -77,7 +83,6 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
 
     text-transform: uppercase;
 
@@ -89,8 +94,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
-
+    padding: 11px 0;
     text-transform: uppercase;
 
     color: #3D4245;
@@ -103,6 +107,7 @@
     line-height: 24px;
     text-transform: uppercase;
     color: #3D4245;
+    padding: 16px 0 10px 0;
   }
 
   &__item {
@@ -113,34 +118,49 @@
     letter-spacing: 0.02em;
 
     color: #6B7B90;
+
+padding: 11px 0;
   }
 
   &__container {
     position: absolute;
     left: 100%;
     top: 0;
+    bottom: 0;
     height: 100%;
     overflow: hidden;
     width: 100%;
-    opacity: 0;
+    padding: 25px 21px;
     transition: left .3s ease, opacity .3s ease;
     z-index: -1000;
+    background: rgba(244, 248, 250, 1);
   }
 
   &._open {
     .dropdown__container {
-      opacity: 1;
+
       z-index: 1;
+      width: 100%;
+      left: 0;
     }
   }
 
   &__prev-btn {
+    position: relative;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 15px;
     width: 100px;
     color: #6B7B90;
+    margin: 2px 9px 31px -12px;
+
+    &:after {
+      content: url("/src/images/mobileMenu/arrow.svg");
+      position: absolute;
+      left: 11px;
+      top: 0;
+    }
   }
 
   @media (min-width: $desktopBreakpoint) {
