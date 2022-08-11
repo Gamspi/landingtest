@@ -1,0 +1,35 @@
+@import '/src/styles/variables';
+
+.last-block {
+  @media (min-width: $desktopBreakpoint) {
+    height: 100vh;
+
+    &__container {
+      max-width: 1460px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 119px 0 0;
+    }
+    &__projects {
+      flex: 0 0 46.3%;
+      margin-top: -33px;
+    }
+    &__news {
+      flex: 0 0 53.7%;
+
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+
+    &__container {
+      padding: 62px 0 0;
+    }
+    &__projects {
+
+      margin-top: 24px;
+    }
+  }
+}

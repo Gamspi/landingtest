@@ -3,5 +3,7 @@ include ../titleBlock/titleBlock
     .projects__container
         .projects__title
             +titleBlock(false, 'Наши проекты')
+            .projects__btns
+                include projectsBtn/projectsBtn
         .projects__content
             include projectsSwiper/projectsSwiper

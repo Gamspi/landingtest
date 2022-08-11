@@ -12,7 +12,19 @@
   @media (min-width: $tabletBreakpoint) {
     &__content {
       height: 62.4vw;
-      margin: 22px 0 0;
+      margin: 5px 0 0;
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+    &__content {
+      height: 340px;
+      margin: -3px 25px 0 0;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    &__content {
+      height: 480px;
+      margin: 0px 56px 0 0;
     }
   }
 }
@@ -25,7 +37,6 @@
   overflow: hidden;
   align-items: flex-end;
   padding: 62px 80px 23.72px 24px;
-  background: #000;
   flex: 0 0 100%;
 
   &__date {
@@ -85,6 +96,39 @@
       max-height: 125px;
     }
   }
+
+  @media (min-width: $desktopBreakpoint) {
+    box-shadow: 0px 8px 25px rgba(196, 210, 216, 0.55);
+    border-radius: 5px;
+    padding: 100px 58px 31.72px 24px;
+    &__date {
+      top: 14px;
+      left: 24px;
+    }
+    &__text-top {
+      font-size: 13px;
+      line-height: 18px;
+    }
+    &__text-bottom {
+      font-size: 28px;
+      line-height: 36px;
+      max-height: 107px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    padding: 100px 149px 66.72px 43px;
+    &__date {
+      top: 20px;
+      left: 36px;
+    }
+
+    &__text-bottom {
+      font-size: 32px;
+      line-height: 41px;
+      max-height: 115px;
+
+    }
+  }
 }
 
 .date {
@@ -121,6 +165,40 @@
   }
 
   @media (min-width: $tabletBreakpoint) {
+    &__day {
+      font-size: 56px;
+      line-height: 79px;
+    }
+    &__month {
+      font-size: 16px;
+      line-height: 23px;
+    }
+    &__year {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__left-block {
+      padding: 0 0 5px 1px;
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+    &__day {
+      font-size: 44px;
+      line-height: 62px;
+    }
+    &__month {
+      font-size: 16px;
+      line-height: 23px;
+    }
+    &__year {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__left-block {
+      padding: 0 0 5px 1px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
     &__day {
       font-size: 56px;
       line-height: 79px;

@@ -1,0 +1,174 @@
+-
+    let mobileMenu = [
+        {
+            label: 'Продукты и сервисы',
+            blocks: [
+                {
+                    title: 'программное обеспечение1',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                },
+                {
+                    title: 'программное обеспечение1',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                },
+                {
+                    title: 'программное обеспечение1',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                },
+                {
+                    title: 'программное обеспечение1',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                },
+            ]
+        },
+        {
+            label: 'функционал',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Контакты',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Продукты и сервисы',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Продукты и сервисы',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Продукты и сервисы',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Продукты и сервисы',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Продукты и сервисы',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Продукты и сервисы',
+            blocks: [
+                {
+                    title: 'программное обеспечение2',
+                    list: [
+                        'Smartptt plus',
+                        'Smartptt interprise',
+                        'Smartptt file transfer',
+                    ]
+                }
+            ]
+        },
+    ]
+
+.mobile-menu.j-mobile-menu
+    .mobile-menu__body
+        .mobile-menu__header.mobile-menu-header
+            button.mobile-menu-header__close-btn.j-close-menu-btn
+                svg(width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M1.00195 1.91992L19.0006 19.9199' stroke='#6B7B90' stroke-width='2' stroke-linecap='round')
+                    path(d='M19.002 1.91992L1.00335 19.9199' stroke='#6B7B90' stroke-width='2' stroke-linecap='round')
+
+        ul.mobile-menu__list.j-list-menu
+          each item in mobileMenu
+              li.mobile-menu__item.dropdown.j-dropdown
+                  button.dropdown__title.j-button-dropdown
+                      .dropdown__label=item.label
+                      .dropdown__arrow
+                          svg(width='7' height='9' viewBox='0 0 7 9' fill='none' xmlns='http://www.w3.org/2000/svg')
+                              path(d='M6.00195 4.50024L0.00195273 9L0.00195312 -2.62268e-07L6.00195 4.50024Z' fill='#6B7B90')
+                  .dropdown__container
+                      button.dropdown__prev-btn.j-prev-btn Назад
+                      ul.dropdown__list
+                        each block in item.blocks
+                            li.dropdown__block
+                                .dropdown__list-title=item.label
+                                .dropdown__list-subtitle=block.title
+                                ul.dropdown__items
+                                  each link in block.list
+                                      li.dropdown__item
+                                          a.dropdown__link(href='#')=link
+          .mobile-menu__footer
+              button.mobile-menu__btn Скачать Демо

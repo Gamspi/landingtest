@@ -17,6 +17,11 @@
     display: none;
   }
 
+  &__search {
+    position: relative;
+    top: -6px;
+  }
+
   @media (min-width: $tabletBreakpoint) {
     padding: 0 30px 0 33px;
     &__burger {
@@ -53,6 +58,58 @@
 
     &__language {
       margin-left: 35.12px;
+    }
+  }
+}
+
+.search {
+  z-index: 1;
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: right .3s ease;
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+
+    letter-spacing: 0.02em;
+    width: 40px;
+    height: 40px;
+    color: #FFFFFF;
+    background: rgba(22, 23, 23, 0.4);
+    border-radius: 20px;
+    padding: 0 37px 0 25px;
+    opacity: 0;
+    transition: opacity .3s ease, width .3s ease;
+    overflow: hidden;
+
+
+    &::placeholder {
+      opacity: 0.6;
+    }
+
+  }
+
+  &._focus {
+    .search__input {
+      opacity: 1;
+
+      width: 460px;
+    }
+
+    .search__btn {
+      right: 10px;
     }
   }
 }

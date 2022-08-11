@@ -7,8 +7,8 @@
                 year: '2018',
             },
             text: {
-                top: 'Промышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производствоПромышленное производство',
-                bottom: 'Решение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторожденийРешение MOTOTRBO™ для сибирских нефтяных месторождений',
+                top: 'Промышленное производство',
+                bottom: 'Решение MOTOTRBO™ для сибирских нефтяных месторождений',
             },
             img: '/src/images/project/project001.jpg',
         }, {
@@ -29,7 +29,7 @@
     ul.projects-swiper__content
       each item in projectsCards
           li.projects-swiper__item.projects-item
-              //img.projects-item__img(src=item.img)
+              img.projects-item__img(src=item.img)
               .projects-item__date.date
                   .date__day=item.date.day
                   .date__left-block

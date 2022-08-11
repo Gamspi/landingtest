@@ -55,8 +55,11 @@ include ../logo/logo
     .header-top__menu
         +headerMenu(topMenu)
     .header-top__actions
-        button.header-top__search
-            include ../search/search
+        .header-top__search
+            form.search.j-search
+                button.search__btn.j-search-btn
+                    include ../search/search
+                input.search__input.j-search-input(placeholder='Поиск по сайту')
         .header-top__language
             include ../languageChainge/languageChainge
 

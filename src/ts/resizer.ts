@@ -40,7 +40,7 @@ class Resize {
               this.main.style.marginTop = `-${this.activePage * 100}vh`
             }
           }
-          if (parseInt(this.main.style.marginTop) < 0) {
+          if (parseInt(this.main.style.marginTop) < 0 && !(this.setionsCount === (this.activePage + 2))) {
             this.header.classList.add('header--black-text')
             this.logoMono!.style.display = 'none'
             this.logoColorful!.style.display = 'block'
@@ -67,8 +67,8 @@ class Resize {
           this.main.style.overflow = 'auto'
           this.main.style.marginTop = '0'
           this.main.onwheel = null
-          this.logoMono!.style.display = 'none'
-          this.logoColorful!.style.display = 'block'
+          this.logoMono!.style.display = 'block'
+          this.logoColorful!.style.display = 'none'
           if (this.header.classList.contains('header--black-text')) {
             this.header.classList.remove('header--black-text')
           }

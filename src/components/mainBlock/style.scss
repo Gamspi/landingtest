@@ -5,6 +5,7 @@
   height: 514px;
   position: relative;
   overflow: hidden;
+
   &__pagination {
     position: absolute;
     left: 0;
@@ -48,27 +49,41 @@
     height: 744px;
     &__menu {
       bottom: 111px;
+
     }
     &__pagination {
       bottom: 262px;
+
     }
   }
   @media (min-width: $desktopBreakpoint) {
     height: 100vh;
     &__menu {
       bottom: 163px;
+      @media (max-height: 798px) {
+        top: 539px
+      }
     }
     &__pagination {
       bottom: 336px;
+      @media (max-height: 798px) {
+        top: 447px
+      }
     }
   }
   @media (min-width: $widthDesktopBreakpoint) {
     height: 100vh;
     &__menu {
       bottom: 220px;
+      @media (max-height: 1000px) {
+        top: 650px
+      }
     }
     &__pagination {
       bottom: 414px;
+      @media (max-height: 1000px) {
+        top: 568px
+      }
     }
   }
 }
@@ -106,11 +121,13 @@
       margin-right: 15px;
     }
   }
+
   @media (min-width: $tabletBreakpoint) {
     padding: 0 33px;
     &__item {
       width: 9px;
       height: 9px;
+
       &:not(:last-child) {
         margin-right: 16px;
       }
@@ -120,17 +137,20 @@
     &__item {
       width: 14px;
       height: 14px;
+
       &:not(:last-child) {
         margin-right: 19px;
       }
+
       &._active {
         width: 18px;
         height: 18px;
-        &:after{
+
+        &:after {
           width: 8px;
           height: 8px;
         }
       }
     }
   }
-  }
+}

@@ -1,0 +1,156 @@
+@import "/src/styles/variables";
+
+.mobile-menu {
+  transition: left .5s ease, right .5s ease;
+  position: fixed;
+  top: 0;
+  left: -110%;
+  right: 110%;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  overflow: hidden;
+
+  &__body {
+    height: 100%;
+    width: 100%;
+    background: rgba(244, 248, 250, 1);
+    overflow: auto;
+  }
+
+  &._active {
+    left: 0;
+    right: 0;
+
+  }
+
+
+  &__list {
+    transition: transform .3s ease;
+
+    &._open {
+      transform: translateX(-100%);
+    }
+  }
+
+  &__btn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
+    box-shadow: 0px 4px 10px rgba(188, 215, 227, 0.8);
+    border-radius: 3px;
+    padding: 20px;
+  }
+
+  &__footer {
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 31.5px 19px 32px 21px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+}
+
+.dropdown {
+  &__title {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+  }
+
+  &__label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #6B7B90;
+  }
+
+  &__list-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #3D4245;
+  }
+
+  &__list-subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #3D4245;
+  }
+
+  &__item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+
+    color: #6B7B90;
+  }
+
+  &__container {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    opacity: 0;
+    transition: left .3s ease, opacity .3s ease;
+    z-index: -1000;
+  }
+
+  &._open {
+    .dropdown__container {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  &__prev-btn {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    width: 100px;
+    color: #6B7B90;
+  }
+
+  @media (min-width: $desktopBreakpoint) {
+    display: none;
+  }
+}
+
+.mobile-menu-header {
+  &__close-btn {
+
+  }
+
+}
