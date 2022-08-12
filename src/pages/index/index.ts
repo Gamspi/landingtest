@@ -2,9 +2,11 @@ import './index.scss'
 import DropdownMenu from '../../ts/dropdownMenu'
 import ListSliderOpacity from '../../ts/listSliderOpacity'
 import OpenMobileMenu from '../../ts/openMobileMenu'
+import PaginationSwiper from '../../ts/paginationSwiper'
 import Questionnaire from '../../ts/questionnaire'
 import Resize from '../../ts/resizer'
 import Search from '../../ts/search'
+import CardSwiper from '../../ts/Swiper'
 
 class Index {
   constructor () {
@@ -22,6 +24,16 @@ class Index {
     document.querySelectorAll('.j-slider-opacity-container')
       .forEach(block => {
         const Container = new ListSliderOpacity(block as HTMLElement)
+        Container.init()
+      })
+    document.querySelectorAll('.j-swiper')
+      .forEach(element => {
+        const Container = new CardSwiper(element as HTMLElement)
+        Container.init()
+      })
+    document.querySelectorAll('.j-pagination-swiper')
+      .forEach(block => {
+        const Container = new PaginationSwiper(block as HTMLElement)
         Container.init()
       })
     document.querySelectorAll('.j-dropdown')

@@ -28,15 +28,18 @@
     &__container {
       padding: 9px 0px 0 30px;
     }
-    &__content {
-      //margin-top: 27px;
-    }
+
     &__title {
       padding-right: 26px;
       align-items: center;
     }
     &__btns {
       margin-top: -9px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    &__title {
+      padding-right: 54px;
     }
   }
 }

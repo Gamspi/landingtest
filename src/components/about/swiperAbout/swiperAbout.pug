@@ -1,8 +1,8 @@
 mixin aboutSwiper(pathArray)
-    .about-swiper
-        ul.about-swiper__content
+    .about-swiper.j-pagination-swiper
+        ul.about-swiper__content.swiper-wrapper
           each path in pathArray
-              li.about-swiper__item
+              li.about-swiper__item.swiper-slide
                   img.about-swiper__img(src=path)
     .about-swiper__pagination
         include ../../pagination/paginatino

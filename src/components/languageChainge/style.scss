@@ -1,0 +1,122 @@
+@import "/src/styles/variables";
+
+.language {
+  position: relative;
+  white-space: nowrap;
+
+  &:hover {
+    .language__list {
+      top: 100%;
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: inherit;
+    opacity: 0.6;
+    margin-left: 12px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__arrow {
+    margin-left: 12px;
+  }
+
+  &__list {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+    padding-top: 10px;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+  }
+
+  &__list-body {
+    width: 107px;
+    color: inherit;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 21px 17px 26px 24px;
+    position: relative;
+    background: #ffffff;
+
+    &:after {
+      content: '';
+      width: 10.96px;
+      height: 10.96px;
+      position: absolute;
+      top: -5.48px;
+      left: 20.25px;
+      color: inherit;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:not(:last-child) {
+
+      margin-bottom: 18px;
+    }
+  }
+
+  &__item-label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    color: #6B7B90;
+    margin-left: 10px;
+
+    &:hover {
+      color: #3D4245;
+    }
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    &__label {
+      margin-left: 12px;
+      font-size: 11px;
+    }
+    &__arrow {
+      margin-left: 9px;
+    }
+  }
+  @media (min-width: $desktopBreakpoint) {
+    &__label {
+      margin-left: 9px;
+      font-size: 11px;
+    }
+    &__arrow {
+      margin-left: 9px;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    &__label {
+      margin-left: 12px;
+    }
+    &__arrow {
+      margin-left: 12px;
+    }
+  }
+}

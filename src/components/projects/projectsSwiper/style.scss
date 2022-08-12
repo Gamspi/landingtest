@@ -1,15 +1,18 @@
 @import '/src/styles/variables';
 
 .projects-swiper {
+  overflow: hidden;
+
   &__content {
     margin: 0 -16px;
     position: relative;
     height: 82vw;
-    overflow: hidden;
     display: flex;
   }
 
   @media (min-width: $tabletBreakpoint) {
+    padding: 30px ;
+    margin: -30px ;
     &__content {
       height: 62.4vw;
       margin: 5px 0 0;

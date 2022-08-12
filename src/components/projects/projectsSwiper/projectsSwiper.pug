@@ -13,7 +13,7 @@
             img: '/src/images/project/project001.jpg',
         }, {
             date: {
-                day: '21',
+                day: '1',
                 month: 'сентября',
                 year: '2018',
             },
@@ -25,10 +25,10 @@
         },
     ]
 
-.projects-swiper
-    ul.projects-swiper__content
+.projects-swiper.j-swiper
+    ul.projects-swiper__content.swiper-wrapper
       each item in projectsCards
-          li.projects-swiper__item.projects-item
+          li.projects-swiper__item.projects-item.swiper-slide
               img.projects-item__img(src=item.img)
               .projects-item__date.date
                   .date__day=item.date.day

@@ -1,10 +1,11 @@
 @import '/src/styles/variables';
 
 .about-swiper {
+  overflow: hidden;
   &__content {
     display: flex;
     align-items: center;
-    overflow: hidden;
+
     padding: 0 3px;
   }
 

@@ -7,8 +7,24 @@ class Resize {
   private static logoMono: HTMLElement
   private static arrowBtn: HTMLElement
 
+  private static pagination: Element
+
+  // eslint-disable-next-line no-undef
+  private static paginationButtons: NodeListOf<HTMLElement>
+
   // eslint-disable-next-line no-useless-constructor
   constructor () {
+  }
+
+  private static changeActivePagination () {
+    this.pagination.children[1].innerHTML = `${this.activePage + 1}/${this.setionsCount - 1}`
+    this.paginationButtons!.forEach(b => {
+      if (b.classList.contains('_active')) {
+        b.classList.remove('_active')
+      }
+    }
+    )
+    this.paginationButtons![this.activePage].classList.add('_active')
   }
 
   static init () {
@@ -16,9 +32,27 @@ class Resize {
     this.arrowBtn = document.querySelector('.arrow-down')!
     this.logoMono = document.querySelector('.logo--mono')!
     this.logoColorful = document.querySelector('.logo--colorful')!
+    this.pagination = document.querySelector('.j-page-pagination')!
+    this.setionsCount = document.querySelector('main')!.childElementCount
+    this.main = document.querySelector('main')!
+    for (let i = 0; i < this.setionsCount - 1; i++) {
+      const newPaginationItem = document.createElement('button')
+      newPaginationItem.classList.add('page-pagination__item')
+      if (i === this.activePage) {
+        newPaginationItem.classList.add('_active')
+      }
+      this.pagination.children[0].append(newPaginationItem)
+    }
+    this.pagination.children[1].innerHTML = `${this.activePage + 1}/${this.setionsCount - 1}`
+    this.paginationButtons = this.pagination.querySelectorAll('.page-pagination__item')
+    this.paginationButtons!.forEach((btn, i) => {
+      btn.onclick = () => {
+        this.activePage = i
+        this.main.style.marginTop = `-${this.activePage * 100}vh`
+        this.changeActivePagination()
+      }
+    })
     document.addEventListener('DOMContentLoaded', () => {
-      this.setionsCount = document.querySelector('main')!.childElementCount
-      this.main = document.querySelector('main')!
       const resizer = new ResizeObserver(_ => {
         if (document.body.offsetWidth >= 1024) {
           this.arrowBtn.onclick = () => {
@@ -33,20 +67,23 @@ class Resize {
             if (e.deltaY > 0) {
               if (this.setionsCount > (this.activePage + 2)) {
                 this.activePage += 1
-                this.main.style.marginTop = `-${this.activePage * 100}vh`
               }
             } else if (this.activePage) {
               this.activePage -= 1
-              this.main.style.marginTop = `-${this.activePage * 100}vh`
             }
+            this.main.style.marginTop = `-${this.activePage * 100}vh`
+
+            this.changeActivePagination()
           }
           if (parseInt(this.main.style.marginTop) < 0 && !(this.setionsCount === (this.activePage + 2))) {
             this.header.classList.add('header--black-text')
             this.logoMono!.style.display = 'none'
             this.logoColorful!.style.display = 'block'
             this.arrowBtn?.classList.add('arrow-down--white')
+            this.pagination.classList.add('_dark')
           } else {
             this.arrowBtn?.classList.remove('arrow-down--white')
+            this.pagination.classList.remove('_dark')
 
             this.header.classList.remove('header--black-text')
             this.logoMono.style.display = 'block'
