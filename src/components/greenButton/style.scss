@@ -1,6 +1,6 @@
 @import "/src/styles/variables";
 .green-button {
-  background: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
+  background: $greenBGGradient;
   box-shadow: 0px 4px 20px rgba(57, 69, 77, 0.6);
   border-radius: 3px;
   padding: 13px 25px 16px 21px;

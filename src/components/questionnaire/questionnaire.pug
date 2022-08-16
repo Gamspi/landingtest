@@ -6,7 +6,7 @@
                 path(d='M19.002 1.91992L1.00335 19.9199' stroke='#6B7B90' stroke-width='2' stroke-linecap='round')
 
 
-        .questionnaire__header.questionnaire-header 
+        .questionnaire__header.questionnaire-header
             h2.questionnaire-header__title Заполните форму
             .questionnaire-header__informations
                 p.questionnaire-header__information Для отправки сообщения заполните, пожалуйста, форму ниже.
@@ -15,7 +15,12 @@
             input.questionnaire__input(placeholder='Имя' type='text' required)
             input.questionnaire__input(placeholder='Email' type='e-mail' required)
             input.questionnaire__input(placeholder='Телефон' type='tel' required)
-            input.questionnaire__input(placeholder='Страна' type='text' required)
+            .questionnaire__input.questionnaire__input--select
+                select(name='country')
+                    //option(disabled=true selected) Страна
+                    option(value='ru') Россия
+                    option(value='usa') USA
+
             input.questionnaire__input(placeholder='Компания' type='text')
             input.questionnaire__input(placeholder='Тема запроса' type='text' required)
             textarea.questionnaire__textarea(placeholder="Сообщение")

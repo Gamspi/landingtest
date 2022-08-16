@@ -1,5 +1,5 @@
 class DropdownMenu {
-  private btn: HTMLElement
+  readonly btn: HTMLElement
   private menu: HTMLElement
   private prevBtn: HTMLElement
 

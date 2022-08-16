@@ -37,7 +37,7 @@
     height: 100%;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity $transition, visibility $transition;
 
     &._active {
       visibility: visible;
@@ -58,6 +58,16 @@
   }
   @media (min-width: $desktopBreakpoint) {
     height: 100vh;
+    &._active {
+      .main-menu__item {
+        transition: margin-top .3s ease;
+        animation: mainAnimation ease 1s;
+        animation-fill-mode: forwards;
+        transform: translateY(100px);
+        opacity: 0;
+      }
+
+    }
     &__menu {
       bottom: 163px;
       @media (max-height: 798px) {
@@ -152,5 +162,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes mainAnimation {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+
   }
 }

@@ -62,7 +62,7 @@
     }
 
     &.green {
-      background: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
+      background: $greenBGGradient;
 
       &:after {
         background-color: #63ad30;
@@ -146,18 +146,18 @@
   @media (min-width: $desktopBreakpoint) {
     padding: 0px 46.9px 0 31.9px;
     &__item {
-      transition: margin-top .3s ease;
-      animation: mainAnimation ease 1s;
-      animation-fill-mode: forwards;
-      transform: translateY(100px);
+      transition: all .3s ease;
+      //animation: mainAnimation ease 1s;
+      //animation-fill-mode: forwards;
+      //transform: translateY(100px);
       opacity: 0;
 
       &:nth-child(2) {
-        animation-delay: 0.3s;
+        animation-delay: 0.3s !important;
       }
 
       &:nth-child(3) {
-        animation-delay: 0.6s;
+        animation-delay: 0.6s !important;
       }
 
       &:hover {
@@ -189,6 +189,7 @@
       font-size: 22px;
       line-height: 28px;
       width: 169px;
+      max-height: 83px;
     }
   }
   @media (min-width: $widthDesktopBreakpoint) {
@@ -221,20 +222,9 @@
       font-size: 28px;
       line-height: 36px;
       width: 228px;
+      max-height: 107px;
     }
   }
 
 }
 
-
-@keyframes mainAnimation {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-
-  }
-}

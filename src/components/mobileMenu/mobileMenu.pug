@@ -163,9 +163,9 @@
 .mobile-menu.j-mobile-menu
     .mobile-menu__body
         .mobile-menu__header.mobile-menu-header
-            .mobile-menu-header__search.mobile-search
-                input.mobile-search__input(placeholder='Поиск по сайту')
-                button.mobile-search__btn
+            form.mobile-menu-header__search.mobile-search.j-search
+                input.mobile-search__input.j-search-input(placeholder='Поиск по сайту')
+                button.mobile-search__btn.j-search-btn
                     img.mobile-search__icon(src="/src/images/mobileMenu/search.svg")
 
             .mobile-menu-header__language
@@ -188,6 +188,10 @@
                           .dropdown__actions.dropdown-actions
                               button.dropdown-actions__prev-btn.j-prev-btn Назад
                               button.dropdown-actions__close-btn.j-close-menu-btn
+                                  svg(width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                      path(d='M1.00195 1.91992L19.0006 19.9199' stroke='#6B7B90' stroke-width='2' stroke-linecap='round')
+                                      path(d='M19.002 1.91992L1.00335 19.9199' stroke='#6B7B90' stroke-width='2' stroke-linecap='round')
+
                           .dropdown__list-title=item.label
                           ul.dropdown__list
                             each block in item.blocks

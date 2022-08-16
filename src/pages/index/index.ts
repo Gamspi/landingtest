@@ -1,4 +1,5 @@
 import './index.scss'
+import AlertController from '../../ts/alerController'
 import DropdownMenu from '../../ts/dropdownMenu'
 import GridSwiper from '../../ts/gridSwiper'
 import ListSliderOpacity from '../../ts/listSliderOpacity'
@@ -16,12 +17,20 @@ class Index {
 
   init () {
     const openMobileMenu = new OpenMobileMenu()
-    const search = new Search()
     const questionnaire = new Questionnaire()
     questionnaire.init()
     openMobileMenu.init()
-    search.init()
     Resize.init()
+    document.querySelectorAll('.j-alert')
+      .forEach(block => {
+        const Container = new AlertController(block as HTMLElement)
+        Container.init()
+      })
+    document.querySelectorAll('.j-search')
+      .forEach(block => {
+        const Container = new Search(block as HTMLElement)
+        Container.init()
+      })
     document.querySelectorAll('.j-slider-opacity-container')
       .forEach(block => {
         const Container = new ListSliderOpacity(block as HTMLElement)

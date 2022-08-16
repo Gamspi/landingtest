@@ -18,7 +18,7 @@
     font-size: 24px;
     line-height: 31px;
     letter-spacing: 0.02em;
-    color: #3D4245;
+    color: $secondaryColor;
     overflow: hidden;
   }
 
@@ -38,6 +38,12 @@
   @media(min-width: $desktopBreakpoint) {
     &__title-top {
       margin-bottom: 3px;
+    }
+    &__title-bottom {
+      transition: color .3s ease;
+      &:hover {
+        color: #0095DA;
+      }
     }
   }
   @media (min-width: $widthDesktopBreakpoint) {

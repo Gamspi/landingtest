@@ -9,8 +9,8 @@
   opacity: 0;
   overflow: hidden;
   z-index: 100;
-  background: rgba(4, 10, 13, 0.6);
-  transition: opacity 0.3s ease;
+  background: $popupBG;
+  transition: opacity $transition;
 
   &__header {
     margin-bottom: 20px;
@@ -28,9 +28,12 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: rgba(244, 248, 250, 1);
+    background-color: rgba(244, 248, 250, 1);
     border-radius: 7px 7px 0 0;
-    //background: linear-gradient(0.4deg, #F4F8FA 14.62%, rgba(244, 248, 250, 0) 94.84%);
+    background-image: url('/src/images/questionnaire/bg.png');
+    -webkit-background-size: cover;
+    background-size: cover;
+
   }
 
   &__input, &__textarea {
@@ -43,7 +46,7 @@
     line-height: 25px;
 
     color: #6B7B90;
-    background: #FFFFFF;
+    background: $primaryColor;
     width: 100%;
     height: 44px;
     padding: 10.5px 17.7px;
@@ -60,6 +63,30 @@
   }
 
   &__input {
+    &--select {
+      position: relative;
+      padding: 0;
+      z-index: 1;
+      select {
+        padding: 10.5px 17.7px;
+
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+      }
+
+      &:after {
+        content: url("/src/images/questionnaire/arrowselect.svg");
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+      }
+    }
 
     &:not(:last-child) {
       margin-bottom: 21px;
@@ -78,7 +105,7 @@
   }
 
   &__btn {
-    background: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
+    background: $greenBGGradient;
     /* btn-shadow */
 
     box-shadow: 0px 4px 10px rgba(188, 215, 227, 0.8);
@@ -90,7 +117,7 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
 
-    color: #FFFFFF;
+    color: $primaryColor;
     width: 100%;
     padding: 13px;
   }
@@ -173,7 +200,7 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
-    color: #3D4245;
+    color: $secondaryColor;
     margin-bottom: 12px;
   }
 
@@ -246,7 +273,7 @@
     margin: 2px 10px 0 0;
     width: 15px;
     height: 15px;
-    background: #FFFFFF;
+    background: $primaryColor;
     border: 1px solid #CFD9DF;
     border-radius: 2px;
     flex: 0 0 15px;
@@ -277,7 +304,7 @@
     font-size: 12px;
     line-height: 18px;
 
-    color: #3D4245;
+    color: $secondaryColor;
 
   }
 

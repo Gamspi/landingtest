@@ -49,7 +49,7 @@ button {
 
 }
 
-nav, footer, header, aside {
+nav, footer, header {
   display: block;
 }
 
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-textarea, input {
+textarea, input, select {
   resize: none;
 
   &:active, &:hover, &:focus {

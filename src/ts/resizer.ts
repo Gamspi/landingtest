@@ -6,12 +6,10 @@ class Resize {
   private static logoColorful: HTMLElement
   private static logoMono: HTMLElement
   private static arrowBtn: HTMLElement
-
+  private static sections: HTMLCollection
   private static pagination: Element
-
   // eslint-disable-next-line no-undef
   private static paginationButtons: NodeListOf<HTMLElement>
-
   // eslint-disable-next-line no-useless-constructor
   constructor () {
   }
@@ -28,9 +26,8 @@ class Resize {
   }
 
   static init () {
-    console.log()
     this.header = document.querySelector('.header')
-    this.arrowBtn = document.querySelector('.arrow-down')!
+    this.arrowBtn = document.querySelector('.j-arrow-down')!
     this.logoMono = document.querySelector('.logo--mono')!
     this.logoColorful = document.querySelector('.logo--colorful')!
     this.pagination = document.querySelector('.j-page-pagination')!
@@ -107,8 +104,6 @@ class Resize {
               this.sections[i].classList.remove('_active')
             }
             this.sections[this.activePage].classList.add('_active')
-            console.log([this.activePage]
-            )
           }
         } else {
           this.main.style.overflow = 'auto'

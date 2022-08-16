@@ -10,11 +10,11 @@
   position: absolute;
   z-index: 20;
   width: 100%;
-  color: #FFFFFF;
+  color: $primaryColor;
   transition: color .3s ease;
 
   path {
-    fill: #ffffff;
+    fill: $primaryColor;
     transition: fill .3s ease;
   }
 
@@ -23,15 +23,15 @@
   }
 
   &--black-text {
-    color: #3D4245;
+    color: $secondaryColor;
 
     path {
-      fill: #3D4245;
-      stroke: #3D4245;
+      fill: $secondaryColor;
+      stroke: $secondaryColor;
     }
 
     circle {
-      stroke: #3D4245;
+      stroke: $secondaryColor
     }
 
   }
@@ -46,6 +46,7 @@
     }
   }
   @media (min-width: $desktopBreakpoint) {
+    position: fixed;
     &__bottom {
       padding-top: 43.8px;
     }

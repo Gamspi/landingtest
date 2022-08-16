@@ -50,8 +50,8 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
 
-    color: #FFFFFF;
-    background: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
+    color: $primaryColor;
+    background: $greenBGGradient;
     box-shadow: 0px 4px 10px rgba(188, 215, 227, 0.8);
     border-radius: 3px;
     padding: 20px;
@@ -74,7 +74,9 @@
 
   @media (min-width: $tabletBreakpoint) {
     display: flex;
-
+    &__list {
+      padding: 18px 0 59px 0;
+    }
     &__body {
       flex: 0 0 50%;
     }
@@ -133,7 +135,7 @@
       padding: 11px 0;
       text-transform: uppercase;
 
-      color: #3D4245;
+      color: $secondaryColor;
     }
 
     &__list-subtitle {
@@ -142,7 +144,7 @@
       font-size: 16px;
       line-height: 24px;
       text-transform: uppercase;
-      color: #3D4245;
+      color: $secondaryColor;
       padding: 16px 0 10px 0;
     }
 
@@ -192,20 +194,6 @@
   align-items: center;
   padding: 20px 23px 0 7px;
 
-  &._search {
-    .mobile-menu-header__language {
-      display: none;
-    }
-
-    .mobile-search {
-      width: 100%;
-
-      &__input {
-        width: 100%;
-      }
-    }
-  }
-
   &__search {
     margin-right: 18px;
   }
@@ -252,26 +240,45 @@
   height: 40px;
   min-width: 40px;
   display: flex;
+  transition: flex .3s ease;
+  flex: 0 0 40px;
+
+  &._focus {
+    flex: 1;
+
+    & ~ div {
+      display: none;
+    }
+
+
+    .mobile-search {
+      width: 100%;
+
+      &__input {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
 
   &__input {
     width: 0;
-
     height: 40px;
-    background: #FFFFFF;
+    background: $primaryColor;
     box-shadow: 0px 4px 25px rgba(123, 153, 188, 0.3);
     border-radius: 20px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    /* identical to box height */
-
+    padding: 11px 32px 12px 25px ;
     letter-spacing: 0.02em;
-
+    transition: width .3s ease, opacity .3s ease;
     color: #6B7B90;
+    opacity: 0;
 
     &::placeholder {
-
+      opacity: 0.6;
     }
   }
 

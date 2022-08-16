@@ -6,11 +6,20 @@
   bottom: 17px;
   justify-content: center;
   width: 100%;
-  transition: opacity 0.3s ease;
+  transition: opacity $transition;
 
   &__bg, &__circle, path {
-    transition: all .5s ease;
+    transition: all .3s ease;
 
+  }
+
+  &__btn:hover {
+    path {
+      animation: arrowDownAnimation 1s linear infinite;
+    }
+  }
+
+  path {
   }
 
   &__btn {
@@ -42,4 +51,19 @@
   @media (min-width: $widthDesktopBreakpoint) {
     height: 66px;
   }
+}
+@keyframes arrowDownAnimation {
+  0% {
+    transform: translateY(0);
+
+  }
+  50% {
+    transform: translateY(-3px);
+
+  }
+  100% {
+    transform: translateY(0);
+
+  }
+
 }

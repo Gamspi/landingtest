@@ -1,0 +1,120 @@
+@import '/src/styles/variables';
+
+.alert-subscription {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  background: $popupBG;
+  z-index: 1000;
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .3s ease;
+
+  &._active {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
+  }
+
+  &__body {
+    background-color: $primaryColor;
+
+    padding: 50px 24px 62px 22px;
+    position: relative;
+    background-size: cover;
+    background-image: url('/src/images/alertSubscription/alertSubscriptionBG.png');
+    width: 100%;
+  }
+
+  &__title {
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: $secondaryColor;
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 23px;
+
+    color: #313538;
+  }
+
+  &__btn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 13.5px;
+    color: $primaryColor;
+    background: $greenBGGradient;
+    /* btn-shadow */
+
+    box-shadow: 0px 4px 10px rgba(188, 215, 227, 0.8);
+    border-radius: 3px;
+    margin-top: 20px;
+  }
+
+
+  &__btn-close {
+    position: absolute;
+    top: 26px;
+    right: 24px;
+  }
+
+  @media (min-width: $tabletBreakpoint) {
+    padding: 101px 32.5px 32.5px;
+    &__body {
+      border-radius: 5px;
+      margin: 0 auto auto;
+      width: 100%;
+      max-width: 703px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+    }
+  }
+  @media (min-width: $widthDesktopBreakpoint) {
+    padding: 144px 32.5px 32.5px;
+
+    &__body {
+      margin: auto;
+      max-width: 1040px;
+    }
+    &__title {
+      font-size: 44px;
+      line-height: 52px;
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 35px;
+
+    }
+  }
+
+
+}
+

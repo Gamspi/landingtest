@@ -1,6 +1,6 @@
-mixin mainCard(title, text)
+mixin mainCard(title, text, src)
     .main-card
-        img.main-card__img(src='/src/images/mainBlockimg/bg.jpg')
+        img.main-card__img(src=src)
         .main-card__body
             h2.main-card__title=title
             .main-card__text=text

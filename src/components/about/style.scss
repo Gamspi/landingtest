@@ -39,7 +39,7 @@
     font-weight: 300;
     font-size: 15px;
     line-height: 26px;
-    color: #3D4245;
+    color: $secondaryColor;
     overflow: hidden;
 
     &:not(:last-child) {
@@ -132,7 +132,7 @@
 }
 
 @media (min-width: $widthDesktopBreakpoint) {
-  padding: 213px 0px 122px 38px;
+  padding: 213px 0px 122px 17px;
   &__paragraph {
     font-size: 20px;
     line-height: 35px;

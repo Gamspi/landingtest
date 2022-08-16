@@ -87,7 +87,7 @@
 
 .footer-card {
   border-radius: 5px;
-  color: #ffffff;
+  color: $primaryColor;
   display: flex;
   flex-direction: column;
   padding: 37px 22px 34px 24px;
@@ -142,7 +142,7 @@
 
   &__btn {
     margin: auto;
-    background: #FFFFFF;
+    background: $primaryColor;
     box-shadow: 0px 4px 10px rgba(71, 86, 96, 0.15);
     border-radius: 3px;
     width: 100%;
@@ -269,7 +269,7 @@
     line-height: 18px;
     letter-spacing: 0.02em;
 
-    color: #FFFFFF;
+    color: $primaryColor;
 
     opacity: 0.8;
     margin-bottom: 27px;
@@ -320,7 +320,7 @@
     display: grid;
     grid-template-columns: 11.5% 34% 25% 11%;
     gap: 38px;
-    margin: 0 0 38px -1px;
+    margin: 0 0 50px -1px;
     &__partners {
       flex: 0 0 14%;
       order: 0;
@@ -335,6 +335,7 @@
 
     &__connection {
       justify-content: flex-end;
+      margin-top: 10px;
     }
     &__socials {
       flex: 0 0 25%;
@@ -350,7 +351,7 @@
   font-size: 16px;
   line-height: 28px;
 
-  color: #FFFFFF;
+  color: $primaryColor;
 
   opacity: 0.8;
   display: flex;
@@ -400,7 +401,7 @@
     }
   }
   @media (min-width: $widthDesktopBreakpoint) {
-    padding: 0 19px 17px;
+    padding: 0 19px 9px;
     align-items: center;
   }
 }
@@ -417,7 +418,7 @@
     line-height: 21px;
     letter-spacing: 0.02em;
 
-    color: #FFFFFF;
+    color: $primaryColor;
 
     opacity: 0.8;
     margin-bottom: 20px;
@@ -435,7 +436,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    color: #FFFFFF;
+    color: $primaryColor;
     opacity: 0.8;
     display: flex;
     align-items: center;
