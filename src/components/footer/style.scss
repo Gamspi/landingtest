@@ -450,10 +450,20 @@
   }
 
   @media (min-width: $tabletBreakpoint) {
+    border-top: none;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 38px 0 38px 0;
+    &:after {
+      content: '';
+      border-top: 1px solid rgba(87, 99, 124, 0.6);
+      position: absolute;
+      top: 0;
+      left: -1000px;
+      right: -1000px;
+    }
     &__first {
       display: flex;
       align-items: center;
@@ -471,6 +481,11 @@
   }
   @media (min-width: $widthDesktopBreakpoint) {
     padding: 43px 0 45px 0;
+    border-top: 1px solid rgba(87, 99, 124, 0.6);
+
+    &:after {
+      content: none;
+    }
   }
 }
 
