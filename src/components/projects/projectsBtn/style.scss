@@ -10,17 +10,18 @@
       height: 40px;
       background: #FFFFFF;
       box-shadow: 0px 2px 8px rgba(196, 210, 216, 0.55);
-      transform: matrix(0, -1, -1, 0, 0, 0);
       display: flex;
       border-radius: 50%;
+      transition: transform .3s ease;
 
       &:not(:last-child) {
         margin-right: 8px;
       }
-
+      &:hover {
+        transform: translateY(-5px) ;
+      }
       svg {
         margin: auto;
-        transform: rotate(-90deg);
 
       }
     }
@@ -29,6 +30,7 @@
     &__item {
       width: 36px;
       height: 36px;
+
       &:not(:last-child) {
         margin-right: 5px;
       }

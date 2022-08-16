@@ -1,35 +1,79 @@
 @import '/src/styles/variables';
 
 .last-block {
+  background-image: url('/src/images/lasytblock/bg.png');
+  //padding-right: 48px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
   @media (min-width: $desktopBreakpoint) {
     height: 100vh;
+    &._active {
+      .projects-swiper {
 
+        animation: lastAnimation 1s ease;
+      }
+
+      .news__card-item {
+        animation: lastAnimationTwo 1s ease;
+
+      }
+    }
     &__container {
       max-width: 1460px;
       margin: 0 auto;
       width: 100%;
       display: flex;
-      align-items: center;
-      height: 100%;
-      padding: 119px 0 0;
+      //align-items: center;
+      //height: 100%;
+      padding: 91px 0 0;
     }
     &__projects {
       flex: 0 0 46.3%;
-      margin-top: -33px;
+      //margin-top: -33px;
     }
     &__news {
       flex: 0 0 53.7%;
 
     }
   }
-  @media (min-width: $desktopBreakpoint) {
-
+  @media (min-width: $widthDesktopBreakpoint) {
+    display: flex;
+    justify-content: center;
     &__container {
       padding: 62px 0 0;
+      margin: 0 0 0 47px;
+      width: 100%;
+      display: flex;
     }
     &__projects {
 
-      margin-top: 24px;
+      //margin-top: 56px;
     }
+  }
+}
+
+@keyframes lastAnimation {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+
+  }
+}
+
+@keyframes lastAnimationTwo {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+
   }
 }

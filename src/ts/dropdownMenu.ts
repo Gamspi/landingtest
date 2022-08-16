@@ -10,13 +10,15 @@ class DropdownMenu {
   }
 
   init () {
-    this.prevBtn.onclick = () => {
-      this.DBContainer.classList.remove('_open')
-      this.menu.classList.remove('_open')
-    }
-    this.btn.onclick = () => {
-      this.DBContainer.classList.add('_open')
-      this.menu.classList.add('_open')
+    if (this.btn) {
+      this.prevBtn.onclick = () => {
+        this.DBContainer.classList.remove('_open')
+        this.menu.classList.remove('_open')
+      }
+      this.btn.onclick = () => {
+        this.DBContainer.classList.add('_open')
+        this.menu.classList.add('_open')
+      }
     }
   }
 }

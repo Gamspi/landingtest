@@ -28,7 +28,7 @@
     height: 98px;
     border-radius: 3px;
     box-shadow: 0 20px 25px rgba(113, 131, 140, 0.5);
-    padding: 12.47px 8px 12.47px 8px ;
+    padding: 12.47px 8px 12.47px 8px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -113,6 +113,7 @@
       height: 96px;
       padding: 12.47px 18px;
       max-height: none;
+
       &:not(:last-child) {
         margin-right: 16px;
       }
@@ -144,8 +145,25 @@
   }
   @media (min-width: $desktopBreakpoint) {
     padding: 0px 46.9px 0 31.9px;
-
     &__item {
+      transition: margin-top .3s ease;
+      animation: mainAnimation ease 1s;
+      animation-fill-mode: forwards;
+      transform: translateY(100px);
+      opacity: 0;
+
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+
+      &:hover {
+        margin-top: -10px;
+      }
+
       padding: 12.47px 26px;
 
       &:not(:last-child) {
@@ -206,4 +224,17 @@
     }
   }
 
+}
+
+
+@keyframes mainAnimation {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+
+  }
 }

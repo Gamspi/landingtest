@@ -8,7 +8,7 @@
     line-height: 20px;
     text-transform: uppercase;
     color: #909BA1;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     overflow: hidden;
   }
 
@@ -19,7 +19,6 @@
     line-height: 31px;
     letter-spacing: 0.02em;
     color: #3D4245;
-    margin-bottom: 16px;
     overflow: hidden;
   }
 
@@ -27,6 +26,8 @@
     &__title-top {
       font-size: 13px;
       line-height: 20px;
+      color: #909BA1;
+      margin-bottom: 8px;
     }
     &__title-bottom {
       font-size: 36px;

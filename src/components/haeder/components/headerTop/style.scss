@@ -19,7 +19,8 @@
 
   &__search {
     position: relative;
-    top: -6px;
+
+    flex: 1 1 auto;
   }
 
   @media (min-width: $tabletBreakpoint) {
@@ -31,6 +32,7 @@
     }
     &__actions {
       display: flex;
+      flex: 1 1 auto;
     }
     &__language {
       margin-left: 16.12px;
@@ -64,6 +66,8 @@
 
 .search {
   z-index: 1;
+  display: flex;
+  justify-content: flex-end;
 
   &__btn {
     position: absolute;
@@ -74,15 +78,10 @@
   }
 
   &__input {
-    position: absolute;
-    top: 0;
-    right: -6px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    /* identical to box height */
-
     letter-spacing: 0.02em;
     width: 40px;
     height: 40px;
@@ -93,8 +92,7 @@
     opacity: 0;
     transition: opacity .3s ease, width .3s ease;
     overflow: hidden;
-
-
+    max-width: 460px;
     &::placeholder {
       opacity: 0.6;
     }
@@ -104,10 +102,9 @@
   &._focus {
     .search__input {
       opacity: 1;
-
-      width: 460px;
+      margin-left: 10px;
+      width: 100%;
     }
-
     .search__btn {
       right: 10px;
     }

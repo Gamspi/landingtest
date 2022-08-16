@@ -1,20 +1,18 @@
 -
   let chooseItems =[
       {icon:'/src/images/choose/choose001.svg', text: 'Гибко настраиваемый пользовательский интерфейс'},
-      {icon:'/src/images/choose/choose002.svg', text: 'Многоуровневая диспетчеризация в соответствии со структурой предприятия'},
-      {icon:'/src/images/choose/choose003.svg', text: 'Многоуровневая диспетчеризация в соответствии со структурой предприятия'},
       {icon:'/src/images/choose/choose004.svg', text: 'Запись разговоров и событий, двойное резервирование данных'},
-      {icon:'/src/images/choose/choose005.svg', text: 'Объединение разнородных сетей связи предприятия в единую коммуникационную систему'},
-      {icon:'/src/images/choose/choose006.svg', text: 'Объединение разнородных сетей связи предприятия в единую коммуникационную систему'},
+      {icon:'/src/images/choose/choose002.svg', text: 'Многоуровневая диспетчеризация в соответствии со структурой предприятия'},
+      {icon:'/src/images/choose/choose005.svg', text: 'Управление чрезвычайными ситуациями'},
+      {icon:'/src/images/choose/choose003.svg', text: 'Объединение разнородных сетей связи предприятия в единую коммуникационную систему'},
+      {icon:'/src/images/choose/choose006.svg', text: 'Удаленный контроль и мониторинг инфраструктуры радиосети'},
   ]
-.choose-swiper
-    .choose-swiper__content
+.choose-swiper.j-grid-swiper.swiper
+    .choose-swiper__content.swiper-wrapper
         each item in chooseItems
-            .choose-swiper__item.choose-item
+            .choose-swiper__item.choose-item.swiper-slide
                 img.choose-item__icon(src=item.icon alt='')
                 .choose-item__text=item.text
-    .choose-swiper__pagination
-        .choose-swiper__pagination
-            include ../../pagination/paginatino
+    .choose-swiper__pagination(id='j-choose-swiper')
 
 

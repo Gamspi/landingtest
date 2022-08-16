@@ -2,32 +2,34 @@
 
 .projects-swiper {
   overflow: hidden;
+  box-shadow: 0px 8px 25px rgba(196, 210, 216, 0.55);
 
   &__content {
-    margin: 0 -16px;
     position: relative;
     height: 82vw;
     display: flex;
   }
 
   @media (min-width: $tabletBreakpoint) {
-    padding: 30px ;
-    margin: -30px ;
+    border-radius: 5px;
     &__content {
       height: 62.4vw;
       margin: 5px 0 0;
     }
   }
   @media (min-width: $desktopBreakpoint) {
+    box-shadow: 0px 8px 25px rgba(196, 210, 216, 0.55);
+
     &__content {
-      height: 340px;
-      margin: -3px 25px 0 0;
+      height: 342px;
+      margin: -3px 0px 0 0;
+
     }
   }
   @media (min-width: $widthDesktopBreakpoint) {
     &__content {
       height: 480px;
-      margin: 0px 56px 0 0;
+      margin: 0px 0px 0 0;
     }
   }
 }
@@ -58,6 +60,7 @@
     bottom: 0;
     object-fit: cover;
     z-index: -1;
+    transition: all .3s ease;
   }
 
   &__text-top {
@@ -82,7 +85,6 @@
   }
 
   @media (min-width: $tabletBreakpoint) {
-    box-shadow: 0px 8px 25px rgba(196, 210, 216, 0.55);
     border-radius: 5px;
     padding: 100px 31px 53.72px 38px;
     &__date {
@@ -101,9 +103,19 @@
   }
 
   @media (min-width: $desktopBreakpoint) {
-    box-shadow: 0px 8px 25px rgba(196, 210, 216, 0.55);
     border-radius: 5px;
     padding: 100px 58px 31.72px 24px;
+    background: #000;
+    &:hover {
+      .projects-item__img {
+        width: 110%;
+        height: 110%;
+        top: -10px;
+        left: -12px;
+        right: -10px;
+        bottom: -10px;
+      }
+    }
     &__date {
       top: 14px;
       left: 24px;

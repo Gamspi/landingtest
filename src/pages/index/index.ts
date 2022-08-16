@@ -1,5 +1,6 @@
 import './index.scss'
 import DropdownMenu from '../../ts/dropdownMenu'
+import GridSwiper from '../../ts/gridSwiper'
 import ListSliderOpacity from '../../ts/listSliderOpacity'
 import OpenMobileMenu from '../../ts/openMobileMenu'
 import PaginationSwiper from '../../ts/paginationSwiper'
@@ -34,6 +35,12 @@ class Index {
     document.querySelectorAll('.j-pagination-swiper')
       .forEach(block => {
         const Container = new PaginationSwiper(block as HTMLElement)
+        Container.init()
+      })
+    document.querySelectorAll('.j-grid-swiper')
+      .forEach(block => {
+        const Container = new GridSwiper(block as HTMLElement)
+
         Container.init()
       })
     document.querySelectorAll('.j-dropdown')

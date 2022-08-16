@@ -2,6 +2,19 @@
 
 .footer {
   background-image: url('/src/images/footer/bg-05.jpg');
+  background-size: cover;
+
+  &._active {
+    .footer-card {
+      &:first-child {
+        animation: leftCardAnimation 1s ease;
+      }
+
+      &:last-child {
+        animation: rightCardAnimation 1s ease;
+      }
+    }
+  }
 
   &__cards {
     display: flex;
@@ -11,6 +24,7 @@
 
   &__container {
     padding: 45.5px 18.5px 0 20.5px;
+
   }
 
   &__info {
@@ -60,7 +74,7 @@
 
     }
     &__info {
-      margin: 0 0 16px -1px;
+      margin: 0 0 44px -1px;
     }
   }
   @media (min-width: $widthDesktopBreakpoint) {
@@ -191,6 +205,12 @@
   @media (min-width: $desktopBreakpoint) {
     flex: 0 1 49.1%;
     padding: 58px 39px 49px 39px;
+    //transition: transform .3s ease;
+    animation-fill-mode: forwards !important;
+    transition: margin .3s ease;
+    &:hover {
+      margin: -10px 0 10px;
+    }
     &__title {
       line-height: 35px;
     }
@@ -286,10 +306,13 @@
   }
   @media (min-width: $desktopBreakpoint) {
 
-
+    &__partners {
+      margin-bottom: 12px;
+    }
     &__text {
       flex: 0 0 50%;
-
+      margin-bottom: 0px;
+      margin-top: -14px;
     }
 
   }
@@ -345,6 +368,9 @@
     line-height: 30px;
     text-align: right;
     margin-bottom: 23px;
+  }
+  @media (min-width: $desktopBreakpoint) {
+    margin-bottom: 17px;
   }
   @media (min-width: $widthDesktopBreakpoint) {
     flex-direction: row;
@@ -438,19 +464,34 @@
       }
     }
 
-    &__second {
-
-    }
-
-    &__icon {
-
-    }
-
   }
   @media (min-width: $desktopBreakpoint) {
     padding: 36px 0 31px 0;
   }
   @media (min-width: $widthDesktopBreakpoint) {
     padding: 43px 0 45px 0;
+  }
+}
+
+@keyframes leftCardAnimation {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rightCardAnimation {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+
   }
 }

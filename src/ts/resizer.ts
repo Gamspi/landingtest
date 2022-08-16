@@ -17,7 +17,7 @@ class Resize {
   }
 
   private static changeActivePagination () {
-    this.pagination.children[1].innerHTML = `${this.activePage + 1}/${this.setionsCount - 1}`
+    this.pagination.children[1].innerHTML = `${this.activePage + 1}/${this.setionsCount}`
     this.paginationButtons!.forEach(b => {
       if (b.classList.contains('_active')) {
         b.classList.remove('_active')
@@ -28,14 +28,16 @@ class Resize {
   }
 
   static init () {
+    console.log()
     this.header = document.querySelector('.header')
     this.arrowBtn = document.querySelector('.arrow-down')!
     this.logoMono = document.querySelector('.logo--mono')!
     this.logoColorful = document.querySelector('.logo--colorful')!
     this.pagination = document.querySelector('.j-page-pagination')!
     this.setionsCount = document.querySelector('main')!.childElementCount
+    this.sections = document.querySelector('main')!.children
     this.main = document.querySelector('main')!
-    for (let i = 0; i < this.setionsCount - 1; i++) {
+    for (let i = 0; i < this.setionsCount; i++) {
       const newPaginationItem = document.createElement('button')
       newPaginationItem.classList.add('page-pagination__item')
       if (i === this.activePage) {
@@ -43,7 +45,7 @@ class Resize {
       }
       this.pagination.children[0].append(newPaginationItem)
     }
-    this.pagination.children[1].innerHTML = `${this.activePage + 1}/${this.setionsCount - 1}`
+    this.pagination.children[1].innerHTML = `${this.activePage + 1}/${this.setionsCount}`
     this.paginationButtons = this.pagination.querySelectorAll('.page-pagination__item')
     this.paginationButtons!.forEach((btn, i) => {
       btn.onclick = () => {
@@ -56,7 +58,7 @@ class Resize {
       const resizer = new ResizeObserver(_ => {
         if (document.body.offsetWidth >= 1024) {
           this.arrowBtn.onclick = () => {
-            if (this.setionsCount > (this.activePage + 2)) {
+            if (this.setionsCount > (this.activePage + 1)) {
               this.activePage += 1
               this.main.style.marginTop = `-${this.activePage * 100}vh`
             }
@@ -65,7 +67,7 @@ class Resize {
           this.main.style.overflow = 'hidden'
           this.main.onwheel = e => {
             if (e.deltaY > 0) {
-              if (this.setionsCount > (this.activePage + 2)) {
+              if (this.setionsCount > (this.activePage + 1)) {
                 this.activePage += 1
               }
             } else if (this.activePage) {
@@ -75,7 +77,7 @@ class Resize {
 
             this.changeActivePagination()
           }
-          if (parseInt(this.main.style.marginTop) < 0 && !(this.setionsCount === (this.activePage + 2))) {
+          if (parseInt(this.main.style.marginTop) < 0 && !(this.setionsCount === (this.activePage + 1))) {
             this.header.classList.add('header--black-text')
             this.logoMono!.style.display = 'none'
             this.logoColorful!.style.display = 'block'
@@ -89,7 +91,7 @@ class Resize {
             this.logoMono.style.display = 'block'
             this.logoColorful!.style.display = 'none'
           }
-          if (this.setionsCount > (this.activePage + 2)) {
+          if (this.setionsCount > (this.activePage + 1)) {
             this.arrowBtn.style.visibility = 'visible'
             this.arrowBtn.style.opacity = '1'
             // @ts-ignore
@@ -99,6 +101,14 @@ class Resize {
             this.arrowBtn.style.visibility = 'hidden'
             // @ts-ignore
             this.arrowBtn.firstElementChild!.disabled = true
+          }
+          if (!this.sections[this.activePage].classList.contains('_active')) {
+            for (let i = 0; i < this.sections.length; i++) {
+              this.sections[i].classList.remove('_active')
+            }
+            this.sections[this.activePage].classList.add('_active')
+            console.log([this.activePage]
+            )
           }
         } else {
           this.main.style.overflow = 'auto'

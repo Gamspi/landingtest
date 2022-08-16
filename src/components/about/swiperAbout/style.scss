@@ -2,10 +2,10 @@
 
 .about-swiper {
   overflow: hidden;
+
   &__content {
     display: flex;
     align-items: center;
-
     padding: 0 3px;
   }
 
@@ -19,6 +19,9 @@
 
   &__pagination {
     margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   @media (min-width: $tabletBreakpoint) {
@@ -42,42 +45,39 @@
     &__img {
       height: 48px;
     }
-    &__item{
+    &__item {
       flex: 0 0 13%;
     }
   }
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  width: 100%;
 
-  &__item {
-    width: 10px;
-    height: 10px;
-    border: 1px solid #C4D0D6;
-    border-radius: 50%;
+}
 
-    &:not(:last-child) {
-      margin-right: 16px;
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #C4D0D6;
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &-active {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: '';
+      border-radius: 50%;
+      height: 6px;
+      width: 6px;
+      background: #0095DA;
     }
-
-    &._active {
-      width: 14px;
-      height: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &:after {
-        content: '';
-        border-radius: 50%;
-        height: 6px;
-        width: 6px;
-        background: #0095DA;
-      }
-    }
-
   }
 }

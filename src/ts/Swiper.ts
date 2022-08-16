@@ -7,7 +7,7 @@ class CardSwiper {
   init () {
     const swiperOpinion = new Swiper(this.block, {
       slidesPerView: 'auto',
-      spaceBetween: 50,
+      spaceBetween: 0,
       centeredSlides: false,
       modules: [Navigation, Pagination],
       navigation: {

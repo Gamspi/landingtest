@@ -3,10 +3,13 @@
 @import './projectsBtn/style';
 
 .projects {
-
   &__container {
     padding: 35px 16px 0;
 
+  }
+
+  &__title {
+    margin-bottom: 18px;
   }
 
   @media (min-width: $tabletBreakpoint) {
@@ -26,20 +29,29 @@
   }
   @media (min-width: $desktopBreakpoint) {
     &__container {
-      padding: 9px 0px 0 30px;
+      padding: 0px 0px 0 30px;
     }
 
     &__title {
       padding-right: 26px;
       align-items: center;
+      margin-bottom: 14px;
     }
     &__btns {
       margin-top: -9px;
     }
+    &__content {
+      margin-right: 25px;
+    }
+
   }
   @media (min-width: $widthDesktopBreakpoint) {
     &__title {
-      padding-right: 54px;
+      margin-bottom: 21px;
+      padding-right: 48px;
+    }
+    &__content {
+      margin-right: 56px;
     }
   }
 }

@@ -1,6 +1,6 @@
-import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Pagination, Grid } from 'swiper'
 
-class PaginationSwiper {
+class GridSwiper {
   // eslint-disable-next-line no-useless-constructor
   constructor (private block: any) {
   }
@@ -8,22 +8,25 @@ class PaginationSwiper {
   init () {
     const swiperOpinion = new Swiper(this.block, {
       observer: true,
-      slidesPerView: 'auto',
+      slidesPerView: 1,
       spaceBetween: 0,
-      centeredSlides: false,
-      modules: [Navigation, Pagination],
+      modules: [Pagination, Grid],
+      grid: {
+        rows: 3
+      },
       pagination: {
         clickable: true,
         el: '#' + this.block.children[1].id
       },
-
-      navigation: {
-        // nextEl: '.j-swiper-button-next',
-        // prevEl: '.j-swiper-button-prev'
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          enabled: false
+        }
       }
     })
     swiperOpinion.enable()
   }
 }
 
-export default PaginationSwiper
+export default GridSwiper

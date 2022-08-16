@@ -4,9 +4,15 @@
   font-size: 14px;
   line-height: 16px;
   color: #0095DA !important;
-
+  &:hover {
+    .more-button__arrow {
+      margin-left: 21px;
+    }
+  }
   &__arrow {
     margin-left: 11px;
+    transition: margin-left .3s ease;
+
   }
 
   &--big-text {

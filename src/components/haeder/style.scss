@@ -1,6 +1,5 @@
 @import "components/burger/style";
 @import "components/headerTop/style";
-@import "components/languageChainge/style";
 @import "components/headerMenu/style";
 @import "components/headerBottom/style";
 @import "components/search/style";
@@ -16,9 +15,11 @@
 
   path {
     fill: #ffffff;
-
     transition: fill .3s ease;
+  }
 
+  circle, path {
+    transition: stroke .3s ease, fill .3s ease;
   }
 
   &--black-text {
@@ -26,8 +27,12 @@
 
     path {
       fill: #3D4245;
+      stroke: #3D4245;
     }
 
+    circle {
+      stroke: #3D4245;
+    }
 
   }
 
