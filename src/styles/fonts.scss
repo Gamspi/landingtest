@@ -1,9 +1,38 @@
 
-//@font-face {
-//  font-family: 'font-name';
-//  src: url('/src/fonts/roboto/regular/font-name.woff2') format('woff2'),
-//  url('/src/fonts/roboto/regular/font-name.woff') format('woff');
-//  font-weight: normal;
-//  font-style: normal;
-//}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@font-face {
+  font-family: 'Roboto';
+  src:url('/src/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+  url('/src/fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src:url('/src/fonts/Roboto/Roboto-Bold.woff') format('woff'),
+  url('/src/fonts/Roboto/Roboto-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Roboto';
+  src:url('/src/fonts/Roboto/Roboto-Medium.woff') format('woff'),
+  url('/src/fonts/Roboto/Roboto-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Roboto';
+  src:url('/src/fonts/Roboto/Roboto-Light.woff') format('woff'),
+  url('/src/fonts/Roboto/Roboto-Light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src:url('/src/fonts/OpenSans/OpenSans-Bold.woff') format('woff'),
+  url('/src/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: bold;
+}
