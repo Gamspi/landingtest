@@ -45,10 +45,10 @@
     }
   }
 
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     display: flex;
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     height: 66px;
   }
 }

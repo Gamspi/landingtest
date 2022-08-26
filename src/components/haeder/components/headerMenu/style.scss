@@ -48,7 +48,7 @@
     }
 
     align-items: center;
-    @media (min-width: $widthDesktopBreakpoint) {
+    @include minMediaMaxDesktop {
       font-size: 14px;
       line-height: 16px;
       &:not(:last-child) {
@@ -65,14 +65,14 @@
         margin-right: 20px;
       }
 
-      @media (min-width: $desktopBreakpoint) {
+      @include minMediaDesktop {
         font-size: 15px;
         line-height: 18px;
         &:not(:last-child) {
           margin-right: 8px;
         }
       }
-      @media (min-width: $widthDesktopBreakpoint) {
+      @include minMediaMaxDesktop {
         font-size: 18px;
         line-height: 21px;
         margin-bottom: 11px;
@@ -86,7 +86,7 @@
   &__label-arrow {
     transition: transform .3s ease;
     margin-left: 7px;
-    @media (min-width: $widthDesktopBreakpoint) {
+    @include minMediaMaxDesktop {
       margin-left: 9px;
     }
   }
@@ -162,7 +162,7 @@
     margin-right: 36px;
   }
 
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     font-size: 14px;
     line-height: 16px;
     &:not(:last-child) {
@@ -184,11 +184,11 @@
       opacity: 1;
     }
 
-    @media (min-width: $desktopBreakpoint) {
+    @include minMediaDesktop {
       font-size: 15px;
       line-height: 18px;
     }
-    @media (min-width: $widthDesktopBreakpoint) {
+    @include minMediaMaxDesktop {
       font-size: 18px;
       line-height: 21px;
       &:not(:last-child) {

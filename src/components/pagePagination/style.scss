@@ -2,7 +2,7 @@
 
 .page-pagination {
   display: none;
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     position: fixed;
     top: 0;
     bottom: 0;

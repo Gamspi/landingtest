@@ -1,4 +1,5 @@
 @import "src/styles/variables";
+@import "src/styles/mixns";
 
 
 * {
@@ -9,22 +10,21 @@
 
 body {
   margin: 0;
-  min-width: 320px;
+
   word-wrap: break-word;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   font-family: $primaryFont;
-
 }
 
 html, body {
-
   word-break: break-word;
 }
 
 html {
-  --height-block: 400px;
+
+  @include htmlFZ;
 }
 
 header {
@@ -78,8 +78,13 @@ h1, h2, h3, h4, h5, h6 {
 
 textarea, input, select {
   resize: none;
+
   &:active, &:hover, &:focus {
     outline: 0;
     outline-offset: 0;
   }
+}
+
+._error{
+    border-color: red !important;
 }

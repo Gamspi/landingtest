@@ -2,7 +2,7 @@
 
 .projects-btn {
   display: none;
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     display: flex;
 
     &__item {
@@ -26,7 +26,7 @@
       }
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     &__item {
       width: 36px;
       height: 36px;

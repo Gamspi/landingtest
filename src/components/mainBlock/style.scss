@@ -2,21 +2,21 @@
 @import "mainMenu/style";
 
 .main-block {
-  height: 514px;
+  height: 51.4rem;
   position: relative;
   overflow: hidden;
 
   &__pagination {
     position: absolute;
     left: 0;
-    bottom: 204px;
+    bottom: 20.4rem;
     width: 100%;
   }
 
   &__menu {
     position: absolute;
     left: 0;
-    bottom: 50px;
+    bottom: 5rem;
     width: 100%;
   }
 
@@ -45,25 +45,25 @@
     }
   }
 
-  @media (min-width: $tabletBreakpoint) {
-    height: 744px;
+  @include minMediaTablet {
+    height: 74.4rem;
     &__menu {
-      bottom: 111px;
+      bottom: 11.1rem;
 
     }
     &__pagination {
-      bottom: 262px;
+      bottom: 26.2rem;
 
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     height: 100vh;
     &._active {
       .main-menu__item {
         transition: margin-top .3s ease;
         animation: mainAnimation ease 1s;
         animation-fill-mode: forwards;
-        transform: translateY(100px);
+        transform: translateY(10rem);
         opacity: 0;
       }
 
@@ -81,18 +81,18 @@
       }
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     height: 100vh;
     &__menu {
       bottom: 220px;
       @media (max-height: 1000px) {
-        top: 650px
+        top: 65rem
       }
     }
     &__pagination {
       bottom: 414px;
       @media (max-height: 1000px) {
-        top: 568px
+        top: 56.8rem
       }
     }
   }
@@ -102,63 +102,63 @@
   display: flex;
   max-width: $maxWith;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 2.4rem;
   align-items: center;
 
   &__item {
-    width: 8px;
-    height: 8px;
+    width: .8rem;
+    height: .8rem;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: .1rem solid rgba(255, 255, 255, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
 
     &._active {
-      width: 12px;
-      height: 12px;
+      width: 1.2rem;
+      height: 1.2rem;
 
       &:after {
         content: '';
-        width: 4px;
-        height: 4px;
+        width: .4rem;
+        height: .4rem;
         border-radius: 50%;
         background: $primaryColor;
       }
     }
 
     &:not(:last-child) {
-      margin-right: 15px;
+      margin-right: 1.5rem;
     }
   }
 
-  @media (min-width: $tabletBreakpoint) {
-    padding: 0 33px;
+  @include minMediaTablet {
+    padding: 0 3.3rem;
     &__item {
-      width: 9px;
-      height: 9px;
+      width: .9rem;
+      height: .9rem;
 
       &:not(:last-child) {
-        margin-right: 16px;
+        margin-right: 1.6rem;
       }
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__item {
-      width: 14px;
-      height: 14px;
+      width: 1.4rem;
+      height: 1.4rem;
 
       &:not(:last-child) {
-        margin-right: 19px;
+        margin-right: 1.9rem;
       }
 
       &._active {
-        width: 18px;
-        height: 18px;
+        width: 1.8rem;
+        height: 1.8rem;
 
         &:after {
-          width: 8px;
-          height: 8px;
+          width: .8rem;
+          height: .8rem;
         }
       }
     }
@@ -167,12 +167,12 @@
 
 @keyframes mainAnimation {
   0% {
-    transform: translateY(100px);
+    transform: translateY(10rem);
     opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
 
   }
 }

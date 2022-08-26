@@ -1,7 +1,7 @@
 @import "/src/styles/variables";
 
 .search-icon {
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     margin-top: 5px;
   }
 }

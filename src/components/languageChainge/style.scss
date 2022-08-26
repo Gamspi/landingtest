@@ -93,7 +93,7 @@
     }
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     &__label {
       margin-left: 12px;
       font-size: 11px;
@@ -102,7 +102,7 @@
       margin-left: 9px;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     &__label {
       margin-left: 9px;
       font-size: 11px;
@@ -111,7 +111,7 @@
       margin-left: 9px;
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__label {
       margin-left: 12px;
     }

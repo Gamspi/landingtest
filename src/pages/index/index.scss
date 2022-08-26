@@ -14,12 +14,12 @@
 
 .main {
   transition: margin-top .5s ease;
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     overflow: hidden;
   }
 }
 body{
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     overflow: hidden;
   }
 }

@@ -12,7 +12,7 @@
     margin-bottom: 18px;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     &__container {
       padding: 52px 30px 0;
 
@@ -27,7 +27,7 @@
     }
 
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     &__container {
       padding: 0px 0px 0 30px;
     }
@@ -45,7 +45,7 @@
     }
 
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__title {
       margin-bottom: 21px;
       padding-right: 48px;

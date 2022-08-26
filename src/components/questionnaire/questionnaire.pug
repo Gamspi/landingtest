@@ -11,10 +11,10 @@
             .questionnaire-header__informations
                 p.questionnaire-header__information Для отправки сообщения заполните, пожалуйста, форму ниже.
                 p.questionnaire-header__information Все поля формы обязательны для заполнения.
-        form.questionnaire__form
+        form.questionnaire__form(novalidate)
             input.questionnaire__input(placeholder='Имя' type='text' required)
             input.questionnaire__input(placeholder='Email' type='e-mail' required)
-            input.questionnaire__input(placeholder='Телефон' type='tel' required)
+            input.questionnaire__input(placeholder='Телефон' type='number' required)
             .questionnaire__input.questionnaire__input--select
                 select(name='country')
                     //option(disabled=true selected) Страна

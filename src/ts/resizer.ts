@@ -106,7 +106,7 @@ class Resize {
             this.sections[this.activePage].classList.add('_active')
           }
         } else {
-          this.main.style.overflow = 'auto'
+          this.main.style.overflow = 'hidden'
           this.main.style.marginTop = '0'
           this.main.onwheel = null
           this.logoMono!.style.display = 'block'

@@ -9,6 +9,7 @@ import Questionnaire from '../../ts/questionnaire'
 import Resize from '../../ts/resizer'
 import Search from '../../ts/search'
 import CardSwiper from '../../ts/Swiper'
+import ValidationForm from '../../ts/validationForm'
 
 class Index {
   constructor () {
@@ -55,6 +56,11 @@ class Index {
     document.querySelectorAll('.j-dropdown')
       .forEach(block => {
         const Container = new DropdownMenu(block as HTMLElement)
+        Container.init()
+      })
+    document.querySelectorAll('form')
+      .forEach(form => {
+        const Container = new ValidationForm(form as HTMLFormElement)
         Container.init()
       })
   }

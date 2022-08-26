@@ -7,7 +7,7 @@
   display: flex;
   bottom: -100%;
   opacity: 0;
-  overflow: hidden;
+  overflow: auto;
   z-index: 100;
   background: $popupBG;
   transition: opacity $transition;
@@ -132,7 +132,8 @@
     object-fit: cover;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
+    padding: 10px;
     &__body {
       width: 703.8px;
       height: 703px;
@@ -176,7 +177,7 @@
       }
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__body {
       width: 1040px;
       height: 703px;
@@ -218,7 +219,7 @@
 
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
 
     &__title {
       font-size: 36px;
@@ -239,7 +240,7 @@
 
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__title {
       font-size: 44px;
       line-height: 52px;

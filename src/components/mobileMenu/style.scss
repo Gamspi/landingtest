@@ -72,7 +72,7 @@
     margin: 0 auto;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     display: flex;
     &__list {
       padding: 18px 0 59px 0;
@@ -84,7 +84,7 @@
       display: none;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     display: none;
 
   }

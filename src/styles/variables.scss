@@ -15,8 +15,11 @@ $widthDesktopBreakpoint: 1920px;
 // background
 $greenBGGradient: linear-gradient(90deg, #7EC74E 14.94%, #5BA93B 114.37%);
 $popupBG: rgba(4, 10, 13, 0.6);
-$maxWith: 1467px;
+$maxWith: 146.7rem;
 
 //
 $transition: 0.3s ease;
 
+//$test: min-width : 123px
+
+$tablet : '(min-width: #{ $tabletBreakpoint })'

@@ -12,7 +12,7 @@
     display: flex;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     border-radius: 5px;
     margin: 0;
     &__content {
@@ -20,7 +20,7 @@
       margin: 5px 0 0;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     box-shadow: 0px 8px 25px rgba(196, 210, 216, 0.55);
 
     &__content {
@@ -29,7 +29,7 @@
 
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__content {
       height: 480px;
       margin: 0px 0px 0 0;
@@ -93,7 +93,7 @@
     max-height: 93px;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     border-radius: 5px;
     padding: 100px 31px 53.72px 38px;
     &__date {
@@ -111,7 +111,7 @@
     }
   }
 
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     border-radius: 5px;
     padding: 100px 58px 31.72px 24px;
     &:hover {
@@ -138,7 +138,7 @@
       max-height: 107px;
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     padding: 100px 149px 66.72px 43px;
     &__date {
       top: 20px;
@@ -197,7 +197,7 @@
     max-width: 60%;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     &__day {
       overflow: hidden;
       font-size: 56px;
@@ -217,7 +217,7 @@
       padding: 0 0 5px 1px;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     &__day {
       font-size: 44px;
       line-height: 62px;
@@ -235,7 +235,7 @@
       padding: 0 0 5px 1px;
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__day {
       font-size: 56px;
       line-height: 79px;
@@ -277,14 +277,14 @@
     overflow: hidden;
   }
 
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     &__title {
       max-height: 40px;
     }
 
   }
 
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__title {
       max-height: 19px;
     }

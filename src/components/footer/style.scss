@@ -31,7 +31,7 @@
     margin-bottom: 32px;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     &__cards {
       flex-direction: row;
       justify-content: space-between;
@@ -49,7 +49,7 @@
       justify-content: space-between;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
 
     height: 100vh;
     &__container {
@@ -77,7 +77,7 @@
       margin: 0 0 44px -1px;
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__container {
       padding: 0.5px 31.5px 12px 29.5px;
     }
@@ -157,7 +157,7 @@
   }
 
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     flex: 0 1 47.2%;
     padding: 58px 39px 41px 39px;
 
@@ -202,7 +202,7 @@
       padding: 12px 0 13px;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     flex: 0 1 49.1%;
     padding: 58px 39px 49px 39px;
     //transition: transform .3s ease;
@@ -220,7 +220,7 @@
       width: 165px;
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     flex: 0 0 48%;
     padding: 82px 70px 78px 56px;
     &__suptitle {
@@ -280,7 +280,7 @@
     text-decoration: underline;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     &__partners {
       flex: 1 1 50%;
       order: 0;
@@ -304,7 +304,7 @@
     }
 
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
 
     &__partners {
       margin-bottom: 12px;
@@ -316,7 +316,7 @@
     }
 
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     display: grid;
     grid-template-columns: 11.5% 34% 25% 11%;
     gap: 38px;
@@ -363,17 +363,17 @@
 
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     flex-direction: column;
     font-size: 17px;
     line-height: 30px;
     text-align: right;
     margin-bottom: 23px;
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     margin-bottom: 17px;
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -392,7 +392,7 @@
     }
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     justify-content: flex-end;
     &__item {
       &:not(:last-child) {
@@ -400,7 +400,7 @@
       }
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     padding: 0 19px 9px;
     align-items: center;
   }
@@ -449,7 +449,7 @@
     height: 11px;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     border-top: none;
     position: relative;
     display: flex;
@@ -476,10 +476,10 @@
     }
 
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     padding: 36px 0 31px 0;
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     padding: 43px 0 45px 0;
     border-top: 1px solid rgba(87, 99, 124, 0.6);
 

@@ -14,7 +14,7 @@
   }
 
   &__img {
-
+    object-fit: cover;
   }
 
   &__pagination {
@@ -24,7 +24,7 @@
     width: 100%;
   }
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     &__pagination {
       display: none !important;
     }
@@ -32,7 +32,7 @@
       flex: 1 0 21.5%;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     padding: 0 20px;
     &__img {
       height: 28px;
@@ -41,7 +41,7 @@
       flex: 1 0 17%;
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     &__img {
       height: 48px;
     }

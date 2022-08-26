@@ -3,15 +3,15 @@
 .logo {
 
 
-  @media (min-width: $tabletBreakpoint) {
+  @include minMediaTablet {
     width: 238px;
     height: 60px;
   }
-  @media (min-width: $desktopBreakpoint) {
+  @include minMediaDesktop {
     width: 155px;
     height: 39px;
   }
-  @media (min-width: $widthDesktopBreakpoint) {
+  @include minMediaMaxDesktop {
     width: 301px;
     height: 75px;
   }

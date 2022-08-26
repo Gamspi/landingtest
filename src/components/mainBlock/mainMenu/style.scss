@@ -3,7 +3,7 @@
 .main-menu {
 
   display: flex;
-  padding: 0 18.9px 0 20.9px;
+  padding: 0 1.89rem 0 2.09rem;
   max-width: $maxWith;
   margin: 0 auto;
   width: 100%;
@@ -13,52 +13,52 @@
     font-family: $primaryFont;
     font-style: normal;
     font-weight: 700;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     text-align: center;
     text-transform: uppercase;
     z-index: 10;
-    max-height: 30px;
+    max-height: 3.0rem;
     overflow: hidden;
   }
 
   &__item {
     position: relative;
     flex: 1 1;
-    height: 98px;
-    border-radius: 3px;
-    box-shadow: 0 20px 25px rgba(113, 131, 140, 0.5);
-    padding: 12.47px 8px 12.47px 8px;
+    height: 9.8rem;
+    border-radius: .3rem;
+    box-shadow: 0 2.0rem 2.5rem rgba(113, 131, 140, 0.5);
+    padding: 1.247rem .8rem 1.247rem .8rem;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
 
     &:not(:last-child) {
-      margin-right: 11px;
+      margin-right: 1.1rem;
     }
 
     &:after {
       content: '';
       position: absolute;
-      width: 98.13px;
-      height: 98.13px;
+      width: 9.813rem;
+      height: 9.813rem;
       border-radius: 50%;
-      right: calc(50% - 49px);
-      top: -27.84px;
+      right: calc(50% - 4.9rem);
+      top: -2.784rem;
     }
 
     &:before {
       position: absolute;
       content: '';
-      height: 42px;
-      width: 42px;
-      top: 5.3px;
-      right: calc(50% - 21px);
+      height: 4.2rem;
+      width: 4.2rem;
+      top: .53rem;
+      right: calc(50% - 2.1rem);
       z-index: 1;
       border-radius: 50%;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 42px;
+      background-size: 4.2rem;
     }
 
     &.green {
@@ -106,50 +106,48 @@
     }
   }
 
-  @media (min-width: $tabletBreakpoint) {
-    padding: 0px 29.9px 0 30.9px;
+  @include minMediaTablet {
+    padding: 0 2.99rem 0 3.09rem;
     &__item {
       align-items: center;
-      height: 96px;
-      padding: 12.47px 18px;
+      height: 9.6rem;
+      padding: 1.247rem 1.8rem;
       max-height: none;
 
       &:not(:last-child) {
-        margin-right: 16px;
+        margin-right: 1.6rem;
       }
 
       &:after {
-        width: 130px;
-        height: 130px;
-        right: -21px;
-        top: calc(50% - 65px);
+        width: 13rem;
+        height: 13rem;
+        right: -2.1rem;
+        top: calc(50% - 6.5rem);
 
       }
 
       &:before {
-        width: 57px;
-        height: 57px;
-        right: 18px;
-        top: calc(50% - 28.5px);
-        background-size: 57px;
+        width: 5.7rem;
+        height: 5.7rem;
+        right: 1.8rem;
+        top: calc(50% - 2.85rem);
+        background-size: 5.7rem;
       }
     }
     &__lable {
-      font-size: 18px;
-      line-height: 23px;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
       letter-spacing: 0.02em;
-      width: 132px;
+      width: 13.2rem;
       text-align: left;
       max-height: none;
     }
   }
-  @media (min-width: $desktopBreakpoint) {
-    padding: 0px 46.9px 0 31.9px;
+  @include minMediaDesktop {
+    padding: 0 4.69rem 0 3.19rem;
     &__item {
       transition: all .3s ease;
-      //animation: mainAnimation ease 1s;
-      //animation-fill-mode: forwards;
-      //transform: translateY(100px);
+      max-height: 150px;
       opacity: 0;
 
       &:nth-child(2) {
@@ -161,68 +159,68 @@
       }
 
       &:hover {
-        margin-top: -10px;
+        margin-top: -1.0rem;
       }
 
-      padding: 12.47px 26px;
+      padding: 1.247rem 2.6rem;
 
       &:not(:last-child) {
-        margin-right: 13px;
+        margin-right: 1.3rem;
       }
 
       &:after {
-        width: 147px;
-        height: 147px;
-        right: -21px;
-        top: calc(50% - 73.5px);
+        width: 14.7rem;
+        height: 14.7rem;
+        right: -2.1rem;
+        top: calc(50% - 7.35rem);
       }
 
       &:before {
-        width: 73px;
-        height: 74px;
-        right: 22px;
-        top: calc(50% - 39.5px);
-        background-size: 73px;
+        width: 7.3rem;
+        height: 7.4rem;
+        right: 2.2rem;
+        top: calc(50% - 3.95rem);
+        background-size: 7.3rem;
       }
     }
     &__lable {
-      font-size: 22px;
-      line-height: 28px;
-      width: 169px;
-      max-height: 83px;
+      font-size: 2.2rem;
+      line-height: 2.8rem;
+      width: 16.9rem;
+      max-height: 8.3rem;
     }
   }
-  @media (min-width: $widthDesktopBreakpoint) {
-    padding: 0px 36.9px 0 38.9px;
+  @include minMediaMaxDesktop {
+    padding: 0 3.69rem 0 3.89rem;
 
     &__item {
-      height: 130px;
-      padding: 12.47px 44px;
-
+      height: 13rem;
+      padding: 1.247rem 4.4rem;
+      max-height: none;
       &:not(:last-child) {
-        margin-right: 35px;
+        margin-right: 3.5rem;
       }
 
       &:after {
-        width: 201px;
-        height: 201px;
-        right: -21px;
-        top: calc(50% - 100.5px);
+        width: 20.1rem;
+        height: 20.1rem;
+        right: -2.1rem;
+        top: calc(50% - 10.05rem);
       }
 
       &:before {
-        width: 99px;
-        height: 99px;
-        right: 32px;
-        top: calc(50% - 49.5px);
-        background-size: 99px;
+        width: 9.9rem;
+        height: 9.9rem;
+        right: 3.2rem;
+        top: calc(50% - 4.95rem);
+        background-size: 9.9rem;
       }
     }
     &__lable {
-      font-size: 28px;
-      line-height: 36px;
-      width: 228px;
-      max-height: 107px;
+      font-size: 2.8rem;
+      line-height: 3.6rem;
+      width: 22.8rem;
+      max-height: 10.7rem;
     }
   }
 
